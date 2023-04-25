@@ -1,14 +1,21 @@
 /*************************************************************
  * 1. Name:
- *      -your name-
+ *      Jacob Johnson and Jaden Myers
  * 2. Assignment Name:
  *      Practice 02: Physics simulator
  * 3. Assignment Description:
  *      Compute how the Apollo lander will move across the screen
  * 4. What was the hardest part? Be as specific as possible.
- *      -a paragraph or two about how the assignment went for you-
+ *      The individual functions were really quite straight forward.
+ *      It was figuring out how to begin on main() that took a second
+ *      to nail down. Once acceleration was solved for, things did run
+ *      smoothly. But the time interval was confusing at first, and there
+ *      is no explanation for it anywhere in the text. However, it was 
+ *      discovered that it is the amount of time that passes inbetween 
+ *      updates being posted to the screen. 
  * 5. How long did it take for you to complete the assignment?
- *      -total time in hours: reading the assignment, submitting, etc.
+ *      two hours, 30 minutes for the functions and an hour and a half
+ *      for main.
  **************************************************************/
 #define _USE_MATH_DEFINES
 
