@@ -118,7 +118,7 @@ double compute_vertical_component(double angle, double total_velocity) {
  *     a : angle, in radians
  *     total : total velocity or acceleration
  * OUTPUT
- *     x : the vertical component of the total
+ *     x : the horizontal component of the total
  ***********************************************/
 double compute_horizontal_component(double angle, double total_velocity) {
     double horizontal_component = total_velocity * sin(angle);
