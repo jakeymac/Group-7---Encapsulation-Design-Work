@@ -159,7 +159,10 @@ double compute_total_component(double horizontal_component, double vertical_comp
  * OUTPUT
  *     r : radians from 0 to 2pi
  **************************************************/
-// your function goes here
+double convert_degrees_to_radians(double degrees) {
+    double radians = degrees * M_PI / 180;
+    return radians;
+}
 
 /**************************************************
  * PROMPT
