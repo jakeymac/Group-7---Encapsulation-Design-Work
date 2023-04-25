@@ -120,7 +120,10 @@ double compute_vertical_component(double angle, double total_velocity) {
  * OUTPUT
  *     x : the vertical component of the total
  ***********************************************/
-// your function goes here
+double compute_horizontal_component(double angle, double total_velocity) {
+    double horizontal_component = total_velocity * sin(angle);
+    return horizontal_component;
+}
 
 /************************************************
  * COMPUTE TOTAL COMPONENT
@@ -141,7 +144,10 @@ double compute_vertical_component(double angle, double total_velocity) {
  * OUTPUT
  *    total : total component
  ***********************************************/
-// your function goes here
+double compute_total_component(double horizontal_component, double vertical_component) {
+    double total_component = sqrt(pow(horizontal_component, 2) + pow(vertical_component, 2));
+    return total_component;
+}
 
 
 /*************************************************
