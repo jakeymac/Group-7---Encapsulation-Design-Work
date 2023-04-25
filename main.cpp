@@ -10,6 +10,7 @@
  * 5. How long did it take for you to complete the assignment?
  *      -total time in hours: reading the assignment, submitting, etc.
  **************************************************************/
+#define _USE_MATH_DEFINES
 
 #include <iostream>  // for CIN and COUT
 #include <string>
@@ -35,7 +36,7 @@ using namespace std;
  * OUTPUT
  *     s : new position, in meters
  **************************************************/
-// your function goes here
+ // your function goes here
 double compute_distance(double current_position, double velocity, double acceleration, double time) {
     return current_position + (velocity * time) + (0.5 * acceleration * (std::pow(time, 2)));
 }
@@ -51,7 +52,7 @@ double compute_distance(double current_position, double velocity, double acceler
  * OUTPUT
  *     a : acceleration, in meters/second^2
  ***************************************************/
-// your function goes here
+ // your function goes here
 
 double compute_acceleration(double force, double mass) {
     return force / mass;
@@ -71,7 +72,7 @@ double compute_acceleration(double force, double mass) {
  * OUTPUT
  *     v : new velocity, in meters/second
  ***********************************************/
-// your function goes here
+ // your function goes here
 
 double compute_velocity(double current_velocity, double acceleration, double time) {
     return current_velocity + (acceleration * time);
@@ -95,11 +96,11 @@ double compute_velocity(double current_velocity, double acceleration, double tim
  * OUTPUT
  *     y : the vertical component of the total
  ***********************************************/
-// your function goes here
+ // your function goes here
 
-//y = cos(a) * total
-double compute_vertical_component(double angle, double total_velocity) {
-    return std::cos(angle) * total_velocity;
+ //y = cos(a) * total
+double compute_vertical_component(double angle, double total) {
+    return std::cos(angle) * total;
 }
 
 /***********************************************
@@ -120,8 +121,8 @@ double compute_vertical_component(double angle, double total_velocity) {
  * OUTPUT
  *     x : the horizontal component of the total
  ***********************************************/
-double compute_horizontal_component(double angle, double total_velocity) {
-    double horizontal_component = total_velocity * sin(angle);
+double compute_horizontal_component(double angle, double total) {
+    double horizontal_component = total * sin(angle);
     return horizontal_component;
 }
 
@@ -172,7 +173,7 @@ double convert_degrees_to_radians(double degrees) {
  * OUTPUT
  *      response : the user's response
  ***************************************************/
-// your function goes here
+ // your function goes here
 double prompt(std::string message) {
     double user_choice;
     std::cout << message << "\n";
@@ -186,30 +187,37 @@ double prompt(std::string message) {
 int main()
 {
     // Prompt for input and variables to be computed
-    double dx =       prompt("What is your horizontal velocity (m/s)? ");
-    double dy =       prompt("What is your vertical velocity (m/s)? ");
-    double y =        prompt("What is your altitude (m)? ");
-    double x =        prompt("What is your position (m)? ");
+    double dx = prompt("What is your horizontal velocity (m/s)? ");
+    double dy = prompt("What is your vertical velocity (m/s)? ");
+    double y = prompt("What is your altitude (m)? ");
+    double x = prompt("What is your position (m)? ");
     double aDegrees = prompt("What is the angle of the LM where 0 is up (degrees)? ");
-    double t =        prompt("What is the time interval (s)? ");
-    double aRadians;            // Angle in radians
-    double accelerationThrust;  // Acceleration due to thrust
-    double ddxThrust;           // Horizontal acceleration due to thrust
-    double ddyThrust;           // Vertical acceleration due to thrust
-    double ddx;                 // Total horizontal acceleration
-    double ddy;                 // Total vertical acceleration
+    double t = prompt("What is the time interval (s)? ");
+    double aRadians = convert_degrees_to_radians(aDegrees);
+    double accelerationThrust = compute_acceleration(THRUST, WEIGHT);
+    double ddxThrust = compute_horizontal_component(aRadians, accelerationThrust);
+    double ddyThrust = compute_vertical_component(aRadians, accelerationThrust);
+    double ddx = ddxThrust;
+    double ddy = ddyThrust + GRAVITY;
     double v;                   // Total velocity
 
     // Go through the simulator five times
-      // your code goes here
+    for (int i = 0; i < 5; i++) {
+        // your code goes here
+        dx = compute_velocity(dx, ddx, t);
+        dy = compute_velocity(dy, ddy, t);
+        v = compute_total_component(dx, dy);
+        x = compute_distance(x, dx, ddx, t);
+        y = compute_distance(y, dy, ddy, t);
+        // Output
+        cout.setf(ios::fixed | ios::showpoint);
+        cout.precision(2);
+        cout << "\tNew position:   (" << x << ", " << y << ")m\n";
+        cout << "\tNew velocity:   (" << dx << ", " << dy << ")m/s\n";
+        cout << "\tTotal velocity:  " << v << "m/s\n\n";
+    }
 
-      // Output
-      cout.setf(ios::fixed | ios::showpoint);
-      cout.precision(2);
-      cout << "\tNew position:   (" <<  x << ", " <<  y << ")m\n";
-      cout << "\tNew velocity:   (" << dx << ", " << dy << ")m/s\n";
-      cout << "\tTotal velocity:  " << v << "m/s\n\n";
 
 
-   return 0;
+    return 0;
 }
