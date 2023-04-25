@@ -36,7 +36,7 @@ using namespace std;
  *     s : new position, in meters
  **************************************************/
 // your function goes here
-double compute_distance(double current_position, double velocity, double acceleration, float time) {
+double compute_distance(double current_position, double velocity, double acceleration, double time) {
     return current_position + (velocity * time) + (0.5 * acceleration * (std::pow(time, 2)));
 }
 
@@ -52,7 +52,6 @@ double compute_distance(double current_position, double velocity, double acceler
  *     a : acceleration, in meters/second^2
  ***************************************************/
 // your function goes here
-
 
 double compute_acceleration(double force, double mass) {
     return force / mass;
@@ -74,7 +73,7 @@ double compute_acceleration(double force, double mass) {
  ***********************************************/
 // your function goes here
 
-double compute_velocity(double current_velocity, double acceleration, float time) {
+double compute_velocity(double current_velocity, double acceleration, double time) {
     return current_velocity + (acceleration * time);
 }
 
@@ -98,7 +97,10 @@ double compute_velocity(double current_velocity, double acceleration, float time
  ***********************************************/
 // your function goes here
 
-
+//y = cos(a) * total
+double compute_vertical_component(double angle, double total_velocity) {
+    return std::
+}
 
 /***********************************************
  * COMPUTE HORIZONTAL COMPONENT
