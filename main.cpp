@@ -99,7 +99,7 @@ double compute_velocity(double current_velocity, double acceleration, double tim
 
 //y = cos(a) * total
 double compute_vertical_component(double angle, double total_velocity) {
-    return std::
+    return std::cos(angle) * total_velocity;
 }
 
 /***********************************************
