@@ -1,22 +1,15 @@
 /*************************************************************
  * 1. Name:
- *      Jacob Johnson and Jaden Myers
+ *      -your name-
  * 2. Assignment Name:
- *      Practice 02: Physics simulator
+ *      Lab 02: Apollo 11
  * 3. Assignment Description:
- *      Compute how the Apollo lander will move across the screen
+ *      Simulate the Apollo 11 landing
  * 4. What was the hardest part? Be as specific as possible.
- *      The individual functions were really quite straight forward.
- *      It was figuring out how to begin on main() that took a second
- *      to nail down. Once acceleration was solved for, things did run
- *      smoothly. But the time interval was confusing at first, and there
- *      is no explanation for it anywhere in the text. However, it was 
- *      discovered that it is the amount of time that passes inbetween 
- *      updates being posted to the screen. 
+ *      -a paragraph or two about how the assignment went for you-
  * 5. How long did it take for you to complete the assignment?
- *      two hours, 30 minutes for the functions and an hour and a half
- *      for main.
- **************************************************************/
+ *      -total time in hours: reading the assignment, submitting, and writing code-
+ *****************************************************************/
 #define _USE_MATH_DEFINES
 
 #include <iostream>  // for CIN and COUT
