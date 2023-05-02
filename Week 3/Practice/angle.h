@@ -57,7 +57,7 @@ public:
     * Takes a degrees as a parameter and updates the 
     * attribute with the passed parameter. If the parameter 
     * is above 360 or below zero, then it will "unwrap" so 
-    * the radians is between 0 and 2?.
+    * the radians is between 0 and 2pi.
     *
     * INPUT
     *     degrees
@@ -71,7 +71,7 @@ public:
     * Takes a radian as a parameter and updates the
     * attribute with the passed parameter. If the parameter
     * is above 360 or below zero, then it will "unwrap" so
-    * the radians is between 0 and 2?.
+    * the radians is between 0 and 2pi.
     *
     * INPUT
     *     radians
@@ -125,9 +125,9 @@ private:
     /***************************************************
         * NORMALIZE
         * Takes a radian as a parameter and reduce it to 
-        * between 0 and 2?. For example, 3? will become ?, 
+        * between 0 and 2pi. For example, 3pi will become pi, 
         * 362° will become 2°, -5° will become 355°, and 
-        * -7? will become ?.
+        * -7pi will become pi.
         *
         * INPUT
         *     radians
