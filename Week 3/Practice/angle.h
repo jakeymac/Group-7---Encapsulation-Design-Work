@@ -22,14 +22,14 @@ using namespace std;
 
 class TestAngle;
 
- /************************************
-  * ANGLE
-  ************************************/
+/************************************
+ * ANGLE
+ ************************************/
 class Angle
 {
-   friend TestAngle;
+    friend TestAngle;
 
-public:   
+public:
     /***************************************************
     * GET DEGREES
     * Takes no parameters and returns the angle in degrees.
@@ -39,7 +39,7 @@ public:
     * OUTPUT
     *     angle : in degrees
     **************************************************/
-    double getDegrees();
+    double getDegrees() { return convertToDegrees(radians); }
 
     /***************************************************
     * GET RADIANS
@@ -50,13 +50,13 @@ public:
     * OUTPUT
     *     angle : in radians
     **************************************************/
-    double getRadians();
+    double getRadians() { return radians; }
 
     /***************************************************
     * SET DEGREES
-    * Takes a degrees as a parameter and updates the 
-    * attribute with the passed parameter. If the parameter 
-    * is above 360 or below zero, then it will "unwrap" so 
+    * Takes a degrees as a parameter and updates the
+    * attribute with the passed parameter. If the parameter
+    * is above 360 or below zero, then it will "unwrap" so
     * the radians is between 0 and 2pi.
     *
     * INPUT
@@ -64,7 +64,7 @@ public:
     * OUTPUT
     *     None
     **************************************************/
-    void setDegrees(double degrees);
+    void setDegrees(double degrees) { radians = convertToRadians(degrees); }
 
     /***************************************************
     * SET RADIANS
@@ -78,15 +78,15 @@ public:
     * OUTPUT
     *     None
     **************************************************/
-    void setRadians(double radians);
+    void setRadians(double radians) { this->radians = radians; }
 
     /***************************************************
     * DISPLAY
-    * Takes a ostream & out as a parameter display the value, 
-    * in degrees, to 1 decimal place of accuracy. This out 
-    * parameter can be treated exactly the same as cout. 
-    * You can use it with a.display(cout) if a is the name 
-    * of your object. 
+    * Takes a ostream & out as a parameter display the value,
+    * in degrees, to 1 decimal place of accuracy. This out
+    * parameter can be treated exactly the same as cout.
+    * You can use it with a.display(cout) if a is the name
+    * of your object.
     *
     * INPUT
     *     ostream & out
@@ -96,11 +96,11 @@ public:
     void display(ostream& out);
 
 private:
-    double radians;
+    double radians; 
 
     /***************************************************
     * CONVERT TO DEGREES
-    * Takes a radians as a parameter and returns degrees. 
+    * Takes a radians as a parameter and returns degrees.
     * Does not utilize the class's attribute.
     *
     * INPUT
@@ -108,7 +108,7 @@ private:
     * OUTPUT
     *     angle : in degrees
     **************************************************/
-    double convertToDegrees(double radians); 
+    double convertToDegrees(double radians);
 
     /***************************************************
         * CONVERT TO RADIANS
@@ -120,13 +120,13 @@ private:
         * OUTPUT
         *     angle : in radians
         **************************************************/
-    double convertToRadians(double degrees); 
+    double convertToRadians(double degrees);
 
     /***************************************************
         * NORMALIZE
-        * Takes a radian as a parameter and reduce it to 
-        * between 0 and 2pi. For example, 3pi will become pi, 
-        * 362° will become 2°, -5° will become 355°, and 
+        * Takes a radian as a parameter and reduce it to
+        * between 0 and 2pi. For example, 3pi will become pi,
+        * 362° will become 2°, -5° will become 355°, and
         * -7pi will become pi.
         *
         * INPUT
