@@ -93,7 +93,12 @@ public:
     * OUTPUT
     *     None, prints to screen
     **************************************************/
-    void display(ostream& out);
+    void display(ostream& out) {
+        out.setf(ios::fixed);     // "fixed" means don't use scientific notation
+        out.setf(ios::showpoint); // "showpoint" means always show the decimal point
+        out.precision(1);         // Set the precision to 1 decimal place of accuracy.
+        out << convertToDegrees(radians) << "degrees";
+    }
 
 private:
     double radians;
