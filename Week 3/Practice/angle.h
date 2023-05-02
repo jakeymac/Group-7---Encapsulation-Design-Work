@@ -29,22 +29,112 @@ class Angle
 {
    friend TestAngle;
 
-public:
-    // Getters
+public:   
+    /***************************************************
+    * GET DEGREES
+    * Takes no parameters and returns the angle in degrees.
+    *
+    * INPUT
+    *     None
+    * OUTPUT
+    *     angle : in degrees
+    **************************************************/
     double getDegrees();
+
+    /***************************************************
+    * GET RADIANS
+    * Takes no parameters and returns the angle in radians.
+    *
+    * INPUT
+    *     None
+    * OUTPUT
+    *     angle : in radians
+    **************************************************/
     double getRadians();
 
-    // Setters
+    /***************************************************
+    * SET DEGREES
+    * Takes a degrees as a parameter and updates the 
+    * attribute with the passed parameter. If the parameter 
+    * is above 360 or below zero, then it will "unwrap" so 
+    * the radians is between 0 and 2?.
+    *
+    * INPUT
+    *     degrees
+    * OUTPUT
+    *     None
+    **************************************************/
     void setDegrees(double degrees); // Takes in degrees, but must convert to radians before changing the member variable
+
+    /***************************************************
+    * SET RADIANS
+    * Takes a radian as a parameter and updates the
+    * attribute with the passed parameter. If the parameter
+    * is above 360 or below zero, then it will "unwrap" so
+    * the radians is between 0 and 2?.
+    *
+    * INPUT
+    *     radians
+    * OUTPUT
+    *     None
+    **************************************************/
     void setRadians(double radians);
 
+    /***************************************************
+    * DISPLAY
+    * Takes a ostream & out as a parameter display the value, 
+    * in degrees, to 1 decimal place of accuracy. This out 
+    * parameter can be treated exactly the same as cout. 
+    * You can use it with a.display(cout) if a is the name 
+    * of your object. 
+    *
+    * INPUT
+    *     ostream & out
+    * OUTPUT
+    *     None, prints to screen
+    **************************************************/
     void display(ostream& out);
 
 private:
     double angle; // In radians
-    double convertToDegrees(double radians); // Does not affect the member variable "angle"
-    double convertToRadians(double degrees); // Does not affect the member variable "angle"
-    double normalize(double radians);        // Does not affect the member variable "angle"
+
+    /***************************************************
+    * CONVERT TO DEGREES
+    * Takes a radians as a parameter and returns degrees. 
+    * Does not utilize the class's attribute.
+    *
+    * INPUT
+    *     radians
+    * OUTPUT
+    *     angle : in degrees
+    **************************************************/
+    double convertToDegrees(double radians); 
+
+    /***************************************************
+        * CONVERT TO RADIANS
+        * Takes a degrees as a parameter and returns radians.
+        * Does not utilize the class's attribute.
+        *
+        * INPUT
+        *     degrees
+        * OUTPUT
+        *     angle : in radians
+        **************************************************/
+    double convertToRadians(double degrees); 
+
+    /***************************************************
+        * NORMALIZE
+        * Takes a radian as a parameter and reduce it to 
+        * between 0 and 2?. For example, 3? will become ?, 
+        * 362° will become 2°, -5° will become 355°, and 
+        * -7? will become ?.
+        *
+        * INPUT
+        *     radians
+        * OUTPUT
+        *     angle : in radians
+        **************************************************/
+    double normalize(double radians);
 
 };
 
