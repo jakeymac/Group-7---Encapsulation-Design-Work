@@ -64,7 +64,7 @@ public:
     * OUTPUT
     *     None
     **************************************************/
-    void setDegrees(double degrees); // Takes in degrees, but must convert to radians before changing the member variable
+    void setDegrees(double degrees);
 
     /***************************************************
     * SET RADIANS
