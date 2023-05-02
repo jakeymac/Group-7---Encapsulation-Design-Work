@@ -96,7 +96,7 @@ public:
     void display(ostream& out);
 
 private:
-    double angle; // In radians
+    double radians;
 
     /***************************************************
     * CONVERT TO DEGREES
@@ -126,7 +126,7 @@ private:
         * NORMALIZE
         * Takes a radian as a parameter and reduce it to 
         * between 0 and 2pi. For example, 3pi will become pi, 
-        * 362° will become 2°, -5° will become 355°, and 
+        * 362Â° will become 2Â°, -5Â° will become 355Â°, and 
         * -7pi will become pi.
         *
         * INPUT
