@@ -108,7 +108,7 @@ private:
     * OUTPUT
     *     angle : in degrees
     **************************************************/
-    double convertToDegrees(double radians);
+    double convertToDegrees(double radians) { return radians * 360.0 / TWO_PI; }
 
     /***************************************************
         * CONVERT TO RADIANS
@@ -120,7 +120,7 @@ private:
         * OUTPUT
         *     angle : in radians
         **************************************************/
-    double convertToRadians(double degrees);
+    double convertToRadians(double degrees) { return degrees * TWO_PI / 360.0; }
 
     /***************************************************
         * NORMALIZE
@@ -134,7 +134,7 @@ private:
         * OUTPUT
         *     angle : in radians
         **************************************************/
-    double normalize(double radians);
+    double normalize(double radians) { return radians - floor(radians / TWO_PI) * TWO_PI; }
 
 };
 
