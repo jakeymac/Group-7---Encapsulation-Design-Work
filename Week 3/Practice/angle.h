@@ -96,7 +96,7 @@ public:
     void display(ostream& out);
 
 private:
-    double radians; 
+    double radians;
 
     /***************************************************
     * CONVERT TO DEGREES
@@ -108,7 +108,7 @@ private:
     * OUTPUT
     *     angle : in degrees
     **************************************************/
-    double convertToDegrees(double radians) { return radians * 360.0 / TWO_PI; }
+    double convertToDegrees(double radians) { return normalize(radians) * 360.0 / TWO_PI; }
 
     /***************************************************
         * CONVERT TO RADIANS
@@ -120,7 +120,7 @@ private:
         * OUTPUT
         *     angle : in radians
         **************************************************/
-    double convertToRadians(double degrees) { return degrees * TWO_PI / 360.0; }
+    double convertToRadians(double degrees) { return normalize(degrees * TWO_PI / 360.0); }
 
     /***************************************************
         * NORMALIZE
