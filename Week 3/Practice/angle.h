@@ -29,6 +29,23 @@ class Angle
 {
    friend TestAngle;
 
+public:
+    // Getters
+    double getDegrees();
+    double getRadians();
+
+    // Setters
+    void setDegrees(double degrees); // Takes in degrees, but must convert to radians before changing the member variable
+    void setRadians(double radians);
+
+    void display(ostream& out);
+
+private:
+    double angle; // In radians
+    double convertToDegrees(double radians); // Does not affect the member variable "angle"
+    double convertToRadians(double degrees); // Does not affect the member variable "angle"
+    double normalize(double radians);        // Does not affect the member variable "angle"
+
 };
 
 
