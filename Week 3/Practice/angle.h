@@ -64,7 +64,7 @@ public:
     * OUTPUT
     *     None
     **************************************************/
-    void setDegrees(double degrees) { radians = convertToRadians(degrees); }
+    void setDegrees(double degrees) { radians = normalize(convertToRadians(degrees)); }
 
     /***************************************************
     * SET RADIANS
@@ -78,7 +78,7 @@ public:
     * OUTPUT
     *     None
     **************************************************/
-    void setRadians(double radians) { this->radians = radians; }
+    void setRadians(double radians) { this->radians = normalize(radians); }
 
     /***************************************************
     * DISPLAY
