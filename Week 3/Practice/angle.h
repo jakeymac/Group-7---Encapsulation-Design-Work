@@ -1,14 +1,15 @@
 /*************************************************************
  * 1. Name:
- *      -your name-
+ *      Jacob Johnson and Jaden Myers
  * 2. Assignment Name:
  *      Practice 03: Angle Class
  * 3. Assignment Description:
  *      A class to represent an angle
  * 4. What was the hardest part? Be as specific as possible.
- *      -a paragraph or two about how the assignment went for you-
+ *      No big problems! Pretty straightforward. The normalize()
+ *      function was fun to figure out. probably the trickiest piece
  * 5. How long did it take for you to complete the assignment?
- *      -total time in hours: reading the assignment, submitting, etc.
+ *      2 hours, including reading, implementing and revising
  **************************************************************/
 
 #pragma once
