@@ -1,0 +1,140 @@
+/**********************************************************************
+ * GL Demo
+ * Just a simple program to demonstrate how to create an Open GL window, 
+ * draw something on the window, and accept simple user input
+ **********************************************************************/
+
+#include "point.h"
+#include "uiInteract.h"
+#include "uiDraw.h"
+#include "ground.h"
+#include "moonlander.h"
+#include "star.h"
+using namespace std;
+
+#define FRAMES_PER_SECOND   10
+
+/*************************************************************************
+ * Demo
+ * Test structure to capture the LM that will move around the screen
+ *************************************************************************/
+class Demo
+{
+public:
+    Demo(const Point& ptUpperRight) :
+        ground(ptUpperRight),
+        moonLander(Point(ptUpperRight.getX() - 50.0, ptUpperRight.getY() - 50.0))
+
+    {
+        this->ptUpperRight = ptUpperRight;
+
+        for (int count = 0; count < 50; count++) {
+            double x = random(0.0, ptUpperRight.getX());
+            double y = random(ground.getY(x), ptUpperRight.getY());
+            stars[count] = Star(Point(x,y));
+        }
+    }
+
+   // this is just for test purposes.  Don't make member variables public!
+   Point ptUpperRight;   // size of the screen
+   MoonLander moonLander;         
+   Ground ground;
+   Star stars[50];
+};
+
+/*************************************
+ * All the interesting work happens here, when
+ * I get called back from OpenGL to draw a frame.
+ * When I am finished drawing, then the graphics
+ * engine will wait until the proper amount of
+ * time has passed and put the drawing on the screen.
+ **************************************/
+void callBack(const Interface *pUI, void * p)
+{
+   ogstream gout;
+
+   // the first step is to cast the void pointer into a game object. This
+   // is the first step of every single callback function in OpenGL. 
+   Demo * pDemo = (Demo *)p;  
+
+   // move the ship around
+   if (pDemo->ground.hitGround(pDemo->moonLander.getLocation(), 20)) {
+       pDemo->moonLander.die();
+   }
+
+   if (pDemo->moonLander.isAlive()) {
+       if (pUI->isRight())
+           pDemo->moonLander.setRightThruster(true);
+       else
+           pDemo->moonLander.setRightThruster(false);
+       if (pUI->isLeft())
+           pDemo->moonLander.setLeftThruster(true);
+       else
+           pDemo->moonLander.setLeftThruster(false);
+       if (pUI->isDown())
+           pDemo->moonLander.setDownThruster(true);
+       else
+           pDemo->moonLander.setDownThruster(false);
+
+       pDemo->moonLander.move(FRAMES_PER_SECOND);
+   }
+   
+   double speed = pDemo->moonLander.getVelocity();
+   double altitude = pDemo->ground.getElevation(pDemo->moonLander.getLocation());
+
+   // draw the ground
+   pDemo->ground.draw(gout);
+
+   // draw the lander and its flames
+   gout.drawLander(pDemo->moonLander.getLocation() /*position*/, pDemo->moonLander.getAngle() /*angle*/);
+   gout.drawLanderFlames(pDemo->moonLander.getLocation(), pDemo->moonLander.getAngle(), /*angle*/
+                    pDemo->moonLander.getDownThruster(), pDemo->moonLander.getLeftThruster(), pDemo->moonLander.getRightThruster());
+
+   // put some text on the screen
+   gout.setPosition(Point(30.0, pDemo->ptUpperRight.getY() - 20));
+   gout << "Fuel:\t" << (int)pDemo->moonLander.getFuel() << " kg\n";
+
+   gout.setPosition(Point(30.0, pDemo->ptUpperRight.getY() - 40));
+   gout << "Altitude:\t" << (int)altitude << " meters\n";
+
+   gout.setPosition(Point(30.0, pDemo->ptUpperRight.getY() - 60.0));
+   gout << "Speed: " << speed << "\n";
+
+   // draw our little stars
+   for (Star &star : pDemo->stars) {
+       gout.drawStar(star.getPoint(), star.getPhase());
+       star.phaseShift();
+   }
+  
+}
+
+/*********************************
+ * Main is pretty sparse.  Just initialize
+ * my Demo type and call the display engine.
+ * That is all!
+ *********************************/
+#ifdef _WIN32_X
+#include <windows.h>
+int WINAPI wWinMain(
+   _In_ HINSTANCE hInstance, 
+   _In_opt_ HINSTANCE hPrevInstance, 
+   _In_ PWSTR pCmdLine, 
+   _In_ int nCmdShow)
+#else // !_WIN32
+int main(int argc, char ** argv)
+#endif // !_WIN32
+{
+   // Initialize OpenGL
+   Point ptUpperRight(400.0, 400.0);
+   Interface ui(0, NULL, 
+                "Open GL Demo", 
+                 ptUpperRight);
+
+   // Initialize the game class
+   Demo demo(ptUpperRight);
+
+   // set everything into action
+   ui.run(callBack, &demo);             
+
+   return 0;
+}
