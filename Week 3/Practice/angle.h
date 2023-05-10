@@ -128,19 +128,3 @@ private:
 **************************************************/
     double normalize(double radians) { return radians - floor(radians / TWO_PI) * TWO_PI; }
 };
-
-    Mark Mayeda
-    Perfect!
-
-Annotations
-Page 3
-
-    Annotation of type point
-    Author :Mark Mayeda
-    Color :Blue
-    Created at 12:28 PM
-    Replies
-        Author :Mark Mayeda
-        Created at 12:28 PM
-        Comment Reply :Perfect!
-
