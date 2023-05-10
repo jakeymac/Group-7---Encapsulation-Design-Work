@@ -31,6 +31,13 @@ class Angle
     friend TestAngle;
 
 public:
+    Angle() { radians = 0.0;}
+    Angle(double degrees) {
+        radians = convertToRadians(degrees);
+    }
+    Angle(const Angle & r) {
+        radians = r.radians;
+    }
     /***************************************************
     * GET DEGREES
     * Takes no parameters and returns the angle in degrees.
@@ -51,7 +58,7 @@ public:
     * OUTPUT
     *     angle : in radians
     **************************************************/
-    double getRadians() { return radians; }
+    double getRadians() const { return radians; }
 
     /***************************************************
     * SET DEGREES
