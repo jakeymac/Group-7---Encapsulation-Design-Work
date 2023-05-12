@@ -33,7 +33,13 @@ list<string> arrayToList(string a[], int num)
  *****************************/
 list<string> arrayToListBackwards(string a[], int num)
 {
-   return list<string>();
+    list<string> myList = list<string>();
+
+    for (int i = 0; i < num; i++) {
+        myList.push_front(a[i]);
+    }
+
+    return myList;
 }
 
 /*****************************
@@ -41,7 +47,11 @@ list<string> arrayToListBackwards(string a[], int num)
  *****************************/
 vector<string> listToVector(const list<string> & l)
 {
-   return vector<string>();
+    vector<string> return_vector;
+    for (auto iterator = l.begin(); iterator != l.end(); iterator++) {
+        return_vector.push_back(*iterator);
+    }
+    return return_vector;
 }
 
 /*****************************
@@ -49,7 +59,11 @@ vector<string> listToVector(const list<string> & l)
  *****************************/
 vector<string> listToVectorBackwards(const list<string>& l)
 {
-   return vector<string>();
+    vector<string> return_vector;
+    for (auto reverse_iterator = l.rbegin(); reverse_iterator != l.rend(); reverse_iterator++) {
+        return_vector.push_back(*reverse_iterator);
+    }
+    return return_vector;
 }
 
 /*****************************
