@@ -19,7 +19,13 @@ using namespace std;
 
 list<string> arrayToList(string a[], int num)
 {
-   return list<string>();
+    list<string> myList = list<string>();
+
+    for (int i = 0; i < num; i++) {
+        myList.push_back(a[i]);
+    }
+
+    return myList;
 }
 
 /*****************************
@@ -51,7 +57,12 @@ vector<string> listToVectorBackwards(const list<string>& l)
  *****************************/
 bool findElementInVector(const vector<string> & v, const string& element)
 {
-   return false;
+    for (string item : v) {
+        if (element == item) {
+            return true;
+        }
+    }
+    return false;
 }
 
 /*****************************
