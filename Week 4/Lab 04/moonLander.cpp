@@ -23,8 +23,8 @@ MoonLander::MoonLander(Point location) {
     downThrusterActive = false;
     dx = 10.0;
     dy = 0.0;
-    fuel = 1030.0;
-    landerMass = 14073.0;
+    fuel = 1110.0;
+    landerMass = 13993.0;
     alive = true;
 }
 
