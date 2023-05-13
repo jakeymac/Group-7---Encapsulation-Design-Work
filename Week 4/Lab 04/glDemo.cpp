@@ -79,8 +79,10 @@ void callBack(const Interface *pUI, void * p)
        pDemo->moonLander.move(FRAMES_PER_SECOND);
    }
    
-   double speed = pDemo->moonLander.getVelocity();
+   double fuel = pDemo->moonLander.getFuel() * 2.205;      // the moonlander returns kg and multiplying by 2.205 converts it to lbs
    double altitude = pDemo->ground.getElevation(pDemo->moonLander.getLocation());
+   double speed = pDemo->moonLander.getVelocity();  
+   
 
    // draw the ground
    pDemo->ground.draw(gout);
@@ -91,14 +93,22 @@ void callBack(const Interface *pUI, void * p)
                     pDemo->moonLander.getDownThruster(), pDemo->moonLander.getLeftThruster(), pDemo->moonLander.getRightThruster());
 
    // put some text on the screen
-   gout.setPosition(Point(30.0, pDemo->ptUpperRight.getY() - 20));
-   gout << "Fuel:\t" << (int)pDemo->moonLander.getFuel() << " kg\n";
+   gout.setf(ios::fixed);
+   gout.setf(ios::showpoint);
+   gout.precision(2);
 
-   gout.setPosition(Point(30.0, pDemo->ptUpperRight.getY() - 40));
-   gout << "Altitude:\t" << (int)altitude << " meters\n";
+   double leftMargin = 15.0;
+   double topOfScreen = pDemo->ptUpperRight.getY();
+   double lineSpace = 20.0;
 
-   gout.setPosition(Point(30.0, pDemo->ptUpperRight.getY() - 60.0));
-   gout << "Speed: " << speed << "\n";
+   gout.setPosition(Point(leftMargin, topOfScreen - lineSpace * 1));
+   gout << "Fuel:     " << (int)fuel << " lbs\n";
+
+   gout.setPosition(Point(leftMargin, topOfScreen - lineSpace * 2));
+   gout << "Altitude: " << (int)altitude << " meters\n";
+
+   gout.setPosition(Point(leftMargin, topOfScreen - lineSpace * 3));
+   gout << "Speed:   " << speed << " m/s\n";
 
    // draw our little stars
    for (Star &star : pDemo->stars) {
