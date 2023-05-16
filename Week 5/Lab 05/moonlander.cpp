@@ -66,6 +66,7 @@ void MoonLander::move()
 void MoonLander::die()
 {
     alive = false;
+    angle = 3.2;
     leftThrusterActive = false;
     rightThrusterActive = false;
     downThrusterActive = false;
