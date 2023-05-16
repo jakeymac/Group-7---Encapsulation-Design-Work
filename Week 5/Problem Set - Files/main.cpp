@@ -8,13 +8,25 @@
 #include <iostream>
 #include <fstream>
 
+void displayBalance(double balance) {
+    std::cout << "Current balance: $" << balance << "\n";
+}
+
 double readBalance() {
     std::ifstream output;
     output.open("data.txt");
-    std::string return_val;
-    std::getline(output, return_val);
-    output.close();
-    return std::stod(return_val);
+    if (output.fail()) {
+        std::cout << "Unable to open data.txt";
+        return 0.00;
+    } else {
+        
+        double return_val;
+        output >> return_val;
+        displayBalance(return_val);
+        output.close();
+        return return_val;
+    }
+   
 
 }
 
@@ -44,7 +56,6 @@ void writeBalance(double balance) {
 int main() {
     double currentBalance;
     currentBalance = readBalance();
-    std::cout << "Current Balance: $" << currentBalance << "\n";
     currentBalance += updateBalance();
     writeBalance(currentBalance);
     
