@@ -1,1 +1,4 @@
-# W05 Lab: Apollo 11 Code Complete
+# W05 
+* Practice
+* Problem Set
+* Lab 05
