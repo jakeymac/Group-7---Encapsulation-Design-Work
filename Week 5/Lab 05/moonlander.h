@@ -28,9 +28,9 @@ public:
     bool getLeftThruster() { return (leftThrusterActive && fuel > 0.0); }
     bool getRightThruster() { return (rightThrusterActive && fuel > 0.0); }
     bool getDownThruster() { return (downThrusterActive && fuel > 0.0); }
-    void setLeftThruster(bool state) { leftThrusterActive = state; }
-    void setRightThruster(bool state) { rightThrusterActive = state; }
-    void setDownThruster(bool state) { downThrusterActive = state; }
+    void setLeftThruster(bool state) { leftThrusterActive = state && alive && (fuel > 0.0); }
+    void setRightThruster(bool state) { rightThrusterActive = state && alive && (fuel > 0.0); }
+    void setDownThruster(bool state) { downThrusterActive = state && alive && (fuel > 0.0); }
     void move();
     double getVelocity() { return physics.get_velocity(); }
     bool isAlive() { return alive; }
@@ -49,5 +49,5 @@ private:
     double thrusterForce;       // In Newtons
     bool alive;
 
-    void burnFuel(double ammount) { fuel = fuel - ammount; }
+    void burnFuel(double ammount);
 };
