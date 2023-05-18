@@ -60,27 +60,10 @@ void callBack(const Interface* pUI, void* p)
         pDemo->moonLander.die();
     }
 
-    if (pDemo->moonLander.isAlive()) {
-        if (pUI->isRight())
-            pDemo->moonLander.setRightThruster(true);
-        else
-            pDemo->moonLander.setRightThruster(false);
-        if (pUI->isLeft())
-            pDemo->moonLander.setLeftThruster(true);
-        else
-            pDemo->moonLander.setLeftThruster(false);
-        if (pUI->isDown())
-            pDemo->moonLander.setDownThruster(true);
-        else
-            pDemo->moonLander.setDownThruster(false);
-
-        pDemo->moonLander.move();
-    }
-
-    double fuel = pDemo->moonLander.getFuel() * 2.205;      // the moonlander returns kg and multiplying by 2.205 converts it to lbs
-    double altitude = pDemo->ground.getElevation(pDemo->moonLander.getLocation());
-    double speed = pDemo->moonLander.getVelocity();
-
+    pDemo->moonLander.setRightThruster(pUI->isRight());
+    pDemo->moonLander.setLeftThruster(pUI->isLeft());    
+    pDemo->moonLander.setDownThruster(pUI->isDown());
+    pDemo->moonLander.move();
 
     // draw the ground
     pDemo->ground.draw(gout);
@@ -88,7 +71,7 @@ void callBack(const Interface* pUI, void* p)
     // draw the lander and its flames
     gout.drawLander(pDemo->moonLander.getLocation() /*position*/, pDemo->moonLander.getAngle() /*angle*/);
     gout.drawLanderFlames(pDemo->moonLander.getLocation(), pDemo->moonLander.getAngle(), /*angle*/
-        pDemo->moonLander.getDownThruster(), pDemo->moonLander.getLeftThruster(), pDemo->moonLander.getRightThruster());
+    pDemo->moonLander.getDownThruster(), pDemo->moonLander.getLeftThruster(), pDemo->moonLander.getRightThruster());
 
     // put some text on the screen
     gout.setf(ios::fixed);
@@ -98,6 +81,10 @@ void callBack(const Interface* pUI, void* p)
     double leftMargin = 15.0;
     double topOfScreen = pDemo->ptUpperRight.getY();
     double lineSpace = 20.0;
+
+    double fuel = pDemo->moonLander.getFuel() * 2.205;      // the moonlander returns kg and multiplying by 2.205 converts it to lbs
+    double altitude = pDemo->ground.getElevation(pDemo->moonLander.getLocation());
+    double speed = pDemo->moonLander.getVelocity();
 
     gout.setPosition(Point(leftMargin, topOfScreen - lineSpace * 1));
     gout << "Fuel:     " << (int)fuel << " lbs\n";
