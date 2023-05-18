@@ -71,3 +71,10 @@ void MoonLander::die()
     rightThrusterActive = false;
     downThrusterActive = false;
 }
+
+void MoonLander::burnFuel(double ammount)
+{
+    fuel = fuel - ammount;
+    if (fuel < 0.0)
+        fuel = 0.0;
+}
