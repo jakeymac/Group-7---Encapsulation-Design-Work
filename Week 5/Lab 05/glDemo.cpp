@@ -57,7 +57,12 @@ void callBack(const Interface* pUI, void* p)
     
     // move the ship around
     if (pDemo ->ground.onPlatform(pDemo->moonLander.getLocation(), pDemo->moonLander.getWidth())) {
-        
+        if(pDemo->moonLander.getVelocity() <= 4.0) {
+            //Moon lander landed method
+            pDemo->moonLander.land();
+        } else {
+            pDemo->moonLander.die();
+        }
     }
     else if (pDemo->ground.hitGround(pDemo->moonLander.getLocation(), pDemo->moonLander.getWidth())) {
         pDemo->moonLander.die();
