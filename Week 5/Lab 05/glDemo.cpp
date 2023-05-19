@@ -71,6 +71,15 @@ void callBack(const Interface* pUI, void* p)
     
     
     if (pDemo->moonLander.isLanded()) {
+        //Display winning message 'eagle is landed'
+        gout.setPosition(Point(100,200));
+        gout << "The eagle has landed";
+    }
+    
+    else if (!pDemo->moonLander.isAlive()) {
+        //Display losing message 'Houston, we have a problem'
+        gout.setPosition(Point(85,200));
+        gout << "Houston, we have a problem";
         
     }
 
