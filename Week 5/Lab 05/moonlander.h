@@ -25,9 +25,9 @@ public:
     Point getLocation() { return location; }
     void setAngle(double angle) { this->angle = angle; }
     void addAngle(double ammount) { angle += ammount; }
-    bool getLeftThruster() { return (leftThrusterActive && fuel > 0.0); }
-    bool getRightThruster() { return (rightThrusterActive && fuel > 0.0); }
-    bool getDownThruster() { return (downThrusterActive && fuel > 0.0); }
+    bool getLeftThruster() { return (leftThrusterActive && alive && (fuel > 0.0)); }
+    bool getRightThruster() { return (rightThrusterActive && alive && (fuel > 0.0)); }
+    bool getDownThruster() { return (downThrusterActive && alive && (fuel > 0.0)); }
     void setLeftThruster(bool state) { leftThrusterActive = state && alive && (fuel > 0.0); }
     void setRightThruster(bool state) { rightThrusterActive = state && alive && (fuel > 0.0); }
     void setDownThruster(bool state) { downThrusterActive = state && alive && (fuel > 0.0); }
