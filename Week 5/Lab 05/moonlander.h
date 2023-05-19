@@ -34,9 +34,10 @@ public:
     void move();
     double getVelocity() { return physics.get_velocity(); }
     bool isAlive() { return alive; }
+    bool isLanded() { return landed; }
     double getFuel() { return fuel; }
     void die();
-    int getWidth() {return width;};
+    void land();
 
 private:
     Physics physics;
@@ -49,7 +50,7 @@ private:
     double landerMass;          // In Kilograms
     double thrusterForce;       // In Newtons
     bool alive;
-    int width;
+    bool landed;
 
     void burnFuel(double ammount);
 };

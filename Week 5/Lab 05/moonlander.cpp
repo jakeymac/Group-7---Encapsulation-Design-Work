@@ -26,6 +26,7 @@ MoonLander::MoonLander(Point location) {
     landerMass = 12835.0;
     thrusterForce = 45000.0;
     alive = true;
+    landed = false;
 }
 
 
@@ -35,7 +36,7 @@ MoonLander::MoonLander(Point location) {
   *****************************************/
 void MoonLander::move()
 {
-    if (alive) {
+    if (alive && !landed) {
 
         if (fuel > 0) {
             if (leftThrusterActive) {
@@ -67,6 +68,14 @@ void MoonLander::die()
 {
     alive = false;
     angle = 3.2;
+    leftThrusterActive = false;
+    rightThrusterActive = false;
+    downThrusterActive = false;
+}
+
+void MoonLander::land()
+{
+    landed = true;
     leftThrusterActive = false;
     rightThrusterActive = false;
     downThrusterActive = false;
