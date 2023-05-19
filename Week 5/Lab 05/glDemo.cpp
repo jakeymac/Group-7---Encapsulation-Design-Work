@@ -67,6 +67,12 @@ void callBack(const Interface* pUI, void* p)
     else if (pDemo->ground.hitGround(pDemo->moonLander.getLocation(), pDemo->moonLander.getWidth())) {
         pDemo->moonLander.die();
     }
+    
+    
+    
+    if (pDemo->moonLander.isLanded()) {
+        
+    }
 
     pDemo->moonLander.setRightThruster(pUI->isRight());
     pDemo->moonLander.setLeftThruster(pUI->isLeft());    
