@@ -36,6 +36,7 @@ public:
     bool isAlive() { return alive; }
     double getFuel() { return fuel; }
     void die();
+    int getWidth() {return width;};
 
 private:
     Physics physics;
@@ -48,6 +49,7 @@ private:
     double landerMass;          // In Kilograms
     double thrusterForce;       // In Newtons
     bool alive;
+    int width;
 
     void burnFuel(double ammount);
 };

@@ -50,13 +50,16 @@ public:
 void callBack(const Interface* pUI, void* p)
 {
     ogstream gout;
-
+    
     // the first step is to cast the void pointer into a game object. This
-    // is the first step of every single callback function in OpenGL. 
+    // is the first step of every single callback function in OpenGL.
     Demo* pDemo = (Demo*)p;
-
+    
     // move the ship around
-    if (pDemo->ground.hitGround(pDemo->moonLander.getLocation(), 20)) {
+    if (pDemo ->ground.onPlatform(pDemo->moonLander.getLocation(), pDemo->moonLander.getWidth())) {
+        
+    }
+    else if (pDemo->ground.hitGround(pDemo->moonLander.getLocation(), pDemo->moonLander.getWidth())) {
         pDemo->moonLander.die();
     }
 
@@ -116,7 +119,7 @@ int WINAPI wWinMain(
     _In_ PWSTR pCmdLine,
     _In_ int nCmdShow)
 #else // !_WIN32
-int main(int argc, char** argv)
+int main()
 #endif // !_WIN32
 {
     // Initialize OpenGL
