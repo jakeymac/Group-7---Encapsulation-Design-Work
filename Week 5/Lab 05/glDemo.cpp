@@ -69,8 +69,6 @@ void callBack(const Interface* pUI, void* p)
         pDemo->moonLander.die();
     }
     
-    
-    
     if (pDemo->moonLander.isLanded()) {
         //Display winning message 'eagle is landed'
         gout.setPosition(Point(105,200));
