@@ -149,7 +149,11 @@ void callBack(const Interface* pUI, void* p)
         gout.drawStar(star.getPoint(), star.getPhase());
         star.phaseShift();
     }
-
+    
+    float sunX = 325.0;
+    float sunY = 375.0;
+    gout.drawSun(Point(sunX,sunY));
+    
 }
 
 /*********************************

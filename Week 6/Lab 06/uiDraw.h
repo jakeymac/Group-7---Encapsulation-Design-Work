@@ -52,6 +52,8 @@ public:
                                  bool bottom = false,
                                  bool left = false,
                                  bool right = false);
+    
+    virtual void drawSun(const Point& pt);
 
    virtual void drawStar(        const Point& pt = Point(),
                                  unsigned char phase = 0);

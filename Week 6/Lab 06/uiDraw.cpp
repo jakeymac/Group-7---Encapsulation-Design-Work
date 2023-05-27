@@ -114,12 +114,37 @@ void ogstream::drawText(const Point& topLeft, const char* text) const
       glutBitmapCharacter(pFont, *p);
 }
 
+
+/************************************************************************
+ * DRAW EARTH
+ * Draw a mini earth on the horizon
+ *   INPUT  POINT     The position of the earth
+ *************************************************************************/
+
 /************************************************************************
  * DRAW STAR
  * Draw a star that twinkles
  *   INPUT  POINT     The position of the beginning of the star
  *          PHASE     The phase of the twinkling
  *************************************************************************/
+
+
+void ogstream::drawSun(const Point& pt)
+{
+    
+    glColor3f(1.0, 1.0, 0.0);
+    glBegin(GL_POINTS);
+    
+    float startX = pt.getX() - 12;
+    float startY = pt.getY() - 12;
+    
+    for (float y = startY; y < pt.getY() + 12; y++){
+        for (float x = startX; x < pt.getX() + 12; x++) {
+            glVertex2f(x,y);
+        }
+    }
+    glEnd();
+}
 void ogstream::drawStar(const Point& point, unsigned char phase)
 {
    // use the current point if the default parameter is used
