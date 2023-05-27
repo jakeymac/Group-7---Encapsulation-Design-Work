@@ -73,15 +73,40 @@ void callBack(const Interface* pUI, void* p)
     
     if (pDemo->moonLander.isLanded()) {
         //Display winning message 'eagle is landed'
-        gout.setPosition(Point(105,200));
+        Point text = pDemo->moonLander.getLocation();
+
+        //Center text above lander
+        text.addY(30.0);
+        text.addX(-60.0);
+
+        //Check if you are too close to the left and right edges of the screen
+        if (text.getX() > 275.0)
+            text.setX(275.0);
+
+        else if (text.getX() < 15.0)
+            text.setX(15.0);
+
+        gout.setPosition(text);
         gout << "The eagle has landed";
     }
-    
+
     else if (!pDemo->moonLander.isAlive()) {
         //Display losing message 'Houston, we have a problem'
-        gout.setPosition(Point(85,200));
+        Point text = pDemo->moonLander.getLocation();
+
+        //Center text above lander
+        text.addY(30.0);
+        text.addX(-80.0);
+
+        //Check if you are too close to the left and right edges of the screen
+        if (text.getX() > 240.0)
+            text.setX(240.0);
+
+        else if (text.getX() < 10.0)
+            text.setX(10.0);
+
+        gout.setPosition(text);
         gout << "Houston, we have a problem";
-        
     }
 
     pDemo->moonLander.setRightThruster(pUI->isRight());
