@@ -155,7 +155,7 @@ void ogstream::drawSun(const Point& pt)
         xIncrement ++;
     }
     
-    for (float currentX = pt.getX(); currentX <= pt.getX() + 17;currentX++) {
+    for (float currentX = pt.getX(); currentX <= pt.getX() + 16;currentX++) {
         for (float currentY = startY - xIncrement; currentY <= startY + xIncrement;currentY ++) {
             glVertex2f(currentX,currentY);
         }
