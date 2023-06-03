@@ -16,6 +16,8 @@
 #include "uiDraw.h"     // for RANDOM and DRAW*
 #include "ground.h"     // for GROUND
 #include "position.h"   // for POSITION
+#include "physics.h"    // for PHYSICS
+#include "trigonometry.h" // For Trig
 using namespace std;
 
 /*************************************************************************
@@ -158,7 +160,12 @@ int main(int argc, char** argv)
    Demo demo(ptUpperRight);
 
    // set everything into action
-   ui.run(callBack, &demo);
+   //ui.run(callBack, &demo);
+    demo.angle = 75;
+    
+    for (int i = 0; i < 20; i++) {
+        
+    }
 
 
    return 0;

@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C18A024F27330881004537C6 /* ground.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C18A024327330880004537C6 /* ground.cpp */; };
-		C18A025027330881004537C6 /* test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C18A024727330880004537C6 /* test.cpp */; };
-		C18A025127330881004537C6 /* uiInteract.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C18A024827330880004537C6 /* uiInteract.cpp */; };
-		C18A025227330881004537C6 /* uiDraw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C18A024A27330881004537C6 /* uiDraw.cpp */; };
-		C18A025327330881004537C6 /* Lab07.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C18A024B27330881004537C6 /* Lab07.cpp */; };
-		C18A025427330881004537C6 /* position.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C18A024E27330881004537C6 /* position.cpp */; };
+		BAC555002A2BCA6600A4A8D7 /* position.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BAC554F62A2BCA6600A4A8D7 /* position.cpp */; };
+		BAC555012A2BCA6600A4A8D7 /* ground.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BAC554F92A2BCA6600A4A8D7 /* ground.cpp */; };
+		BAC555022A2BCA6600A4A8D7 /* uiInteract.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BAC554FA2A2BCA6600A4A8D7 /* uiInteract.cpp */; };
+		BAC555032A2BCA6600A4A8D7 /* test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BAC554FD2A2BCA6600A4A8D7 /* test.cpp */; };
+		BAC555042A2BCA6600A4A8D7 /* uiDraw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BAC554FF2A2BCA6600A4A8D7 /* uiDraw.cpp */; };
+		BAC555062A2BCC9600A4A8D7 /* Lab07.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BAC555052A2BCC9600A4A8D7 /* Lab07.cpp */; };
 		C18A0258273308A4004537C6 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C18A0256273308A4004537C6 /* GLUT.framework */; };
 		C18A0259273308A4004537C6 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C18A0257273308A4004537C6 /* OpenGL.framework */; };
 /* End PBXBuildFile section */
@@ -30,22 +30,25 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BAC554F42A2BCA6600A4A8D7 /* testPosition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testPosition.h; sourceTree = "<group>"; };
+		BAC554F52A2BCA6600A4A8D7 /* test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = test.h; sourceTree = "<group>"; };
+		BAC554F62A2BCA6600A4A8D7 /* position.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = position.cpp; sourceTree = "<group>"; };
+		BAC554F72A2BCA6600A4A8D7 /* uiDraw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uiDraw.h; sourceTree = "<group>"; };
+		BAC554F82A2BCA6600A4A8D7 /* position.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = position.h; sourceTree = "<group>"; };
+		BAC554F92A2BCA6600A4A8D7 /* ground.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ground.cpp; sourceTree = "<group>"; };
+		BAC554FA2A2BCA6600A4A8D7 /* uiInteract.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = uiInteract.cpp; sourceTree = "<group>"; };
+		BAC554FB2A2BCA6600A4A8D7 /* uiInteract.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uiInteract.h; sourceTree = "<group>"; };
+		BAC554FC2A2BCA6600A4A8D7 /* angle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = angle.h; sourceTree = "<group>"; };
+		BAC554FD2A2BCA6600A4A8D7 /* test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test.cpp; sourceTree = "<group>"; };
+		BAC554FE2A2BCA6600A4A8D7 /* testGround.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testGround.h; sourceTree = "<group>"; };
+		BAC554FF2A2BCA6600A4A8D7 /* uiDraw.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = uiDraw.cpp; sourceTree = "<group>"; };
+		BAC555052A2BCC9600A4A8D7 /* Lab07.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Lab07.cpp; sourceTree = "<group>"; };
+		BAC555072A2BCCC600A4A8D7 /* ground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ground.h; sourceTree = "<group>"; };
+		BAC555082A2BCCD100A4A8D7 /* trigonometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = trigonometry.h; sourceTree = "<group>"; };
+		BAC555092A2BCD5E00A4A8D7 /* physics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = physics.h; sourceTree = "<group>"; };
 		C18A023927330832004537C6 /* Lab07 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Lab07; sourceTree = BUILT_PRODUCTS_DIR; };
-		C18A024327330880004537C6 /* ground.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ground.cpp; sourceTree = "<group>"; };
-		C18A024427330880004537C6 /* position.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = position.h; sourceTree = "<group>"; };
-		C18A024527330880004537C6 /* ground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ground.h; sourceTree = "<group>"; };
-		C18A024627330880004537C6 /* testPosition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testPosition.h; sourceTree = "<group>"; };
-		C18A024727330880004537C6 /* test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test.cpp; sourceTree = "<group>"; };
-		C18A024827330880004537C6 /* uiInteract.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = uiInteract.cpp; sourceTree = "<group>"; };
-		C18A024927330880004537C6 /* test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = test.h; sourceTree = "<group>"; };
-		C18A024A27330881004537C6 /* uiDraw.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = uiDraw.cpp; sourceTree = "<group>"; };
-		C18A024B27330881004537C6 /* Lab07.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Lab07.cpp; sourceTree = "<group>"; };
-		C18A024C27330881004537C6 /* uiDraw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uiDraw.h; sourceTree = "<group>"; };
-		C18A024D27330881004537C6 /* uiInteract.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uiInteract.h; sourceTree = "<group>"; };
-		C18A024E27330881004537C6 /* position.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = position.cpp; sourceTree = "<group>"; };
 		C18A0256273308A4004537C6 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
 		C18A0257273308A4004537C6 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
-		C1B0EA5A27E22792004C9F71 /* testGround.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testGround.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,19 +67,22 @@
 		C18A023027330832004537C6 = {
 			isa = PBXGroup;
 			children = (
-				C1B0EA5A27E22792004C9F71 /* testGround.h */,
-				C18A024327330880004537C6 /* ground.cpp */,
-				C18A024527330880004537C6 /* ground.h */,
-				C18A024B27330881004537C6 /* Lab07.cpp */,
-				C18A024E27330881004537C6 /* position.cpp */,
-				C18A024427330880004537C6 /* position.h */,
-				C18A024727330880004537C6 /* test.cpp */,
-				C18A024927330880004537C6 /* test.h */,
-				C18A024627330880004537C6 /* testPosition.h */,
-				C18A024A27330881004537C6 /* uiDraw.cpp */,
-				C18A024C27330881004537C6 /* uiDraw.h */,
-				C18A024827330880004537C6 /* uiInteract.cpp */,
-				C18A024D27330881004537C6 /* uiInteract.h */,
+				BAC554FC2A2BCA6600A4A8D7 /* angle.h */,
+				BAC554F92A2BCA6600A4A8D7 /* ground.cpp */,
+				BAC555052A2BCC9600A4A8D7 /* Lab07.cpp */,
+				BAC555082A2BCCD100A4A8D7 /* trigonometry.h */,
+				BAC555072A2BCCC600A4A8D7 /* ground.h */,
+				BAC554F62A2BCA6600A4A8D7 /* position.cpp */,
+				BAC555092A2BCD5E00A4A8D7 /* physics.h */,
+				BAC554F82A2BCA6600A4A8D7 /* position.h */,
+				BAC554FD2A2BCA6600A4A8D7 /* test.cpp */,
+				BAC554F52A2BCA6600A4A8D7 /* test.h */,
+				BAC554FE2A2BCA6600A4A8D7 /* testGround.h */,
+				BAC554F42A2BCA6600A4A8D7 /* testPosition.h */,
+				BAC554FF2A2BCA6600A4A8D7 /* uiDraw.cpp */,
+				BAC554F72A2BCA6600A4A8D7 /* uiDraw.h */,
+				BAC554FA2A2BCA6600A4A8D7 /* uiInteract.cpp */,
+				BAC554FB2A2BCA6600A4A8D7 /* uiInteract.h */,
 				C18A023A27330832004537C6 /* Products */,
 				C18A0255273308A4004537C6 /* Frameworks */,
 			);
@@ -126,7 +132,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastUpgradeCheck = 1310;
+				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					C18A023827330832004537C6 = {
 						CreatedOnToolsVersion = 13.1;
@@ -156,12 +162,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C18A024F27330881004537C6 /* ground.cpp in Sources */,
-				C18A025027330881004537C6 /* test.cpp in Sources */,
-				C18A025427330881004537C6 /* position.cpp in Sources */,
-				C18A025327330881004537C6 /* Lab07.cpp in Sources */,
-				C18A025127330881004537C6 /* uiInteract.cpp in Sources */,
-				C18A025227330881004537C6 /* uiDraw.cpp in Sources */,
+				BAC555062A2BCC9600A4A8D7 /* Lab07.cpp in Sources */,
+				BAC555042A2BCA6600A4A8D7 /* uiDraw.cpp in Sources */,
+				BAC555012A2BCA6600A4A8D7 /* ground.cpp in Sources */,
+				BAC555032A2BCA6600A4A8D7 /* test.cpp in Sources */,
+				BAC555002A2BCA6600A4A8D7 /* position.cpp in Sources */,
+				BAC555022A2BCA6600A4A8D7 /* uiInteract.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +208,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -261,6 +268,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -283,6 +291,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -291,6 +300,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

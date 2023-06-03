@@ -1,19 +1,20 @@
 #pragma once
-#include "point.h"
+#include "position.h"
 #include "trigonometry.h"
 
 class Physics {
 public:
-    Physics()
+    Physics(double v, double radians)
     {
+        
         t = 1.0;
         gravity = 0;
         dv = 0.0;
         ddx = 0.0;
         ddy = 0.0;
-        v = 0.0;
-        dx = 0.0;
-        dy = 0.0;
+        this->v = v;
+        dx = Trigonometry::computeHorizontalComponent(radians, v);
+        dy = Trigonometry::computeVerticalComponent(radians, v);
     }
 
     void compute_physics(double force, double mass, double radians) 
@@ -42,10 +43,10 @@ public:
         v = Trigonometry::computeTotalComponent(dx, dy);
     }
 
-    Point compute_location(Point pt)
+    Position compute_location(Position pt)
     {
-        pt.addX(dx * t);
-        pt.addY(dy * t);
+        pt.addMetersX(dx * t);
+        pt.addMetersY(dy * t);
         return pt;
     }
 
