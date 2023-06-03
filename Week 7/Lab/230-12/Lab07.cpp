@@ -153,10 +153,10 @@ int main(int argc, char** argv)
    Position ptUpperRight;
    ptUpperRight.setPixelsX(700.0);
    ptUpperRight.setPixelsY(500.0);
-   Position().setZoom(40.0 /* 42 meters equals 1 pixel */);
-   Interface ui(0, NULL,
-      "Demo",   /* name on the window */
-      ptUpperRight);
+   //Position().setZoom(40.0 /* 42 meters equals 1 pixel */);
+   //Interface ui(0, NULL,
+      //"Demo",   /* name on the window */
+      //ptUpperRight);
 
    // Initialize the demo
    Demo demo(ptUpperRight);
@@ -171,12 +171,10 @@ int main(int argc, char** argv)
     double hangTime = 0.0;
     
     Physics physics = Physics(827.0, demo.angle);
+    physics.applyGravity();
     
     
     while (demo.ptHowitzer.getMetersY() > -0.1) {
-        if (hangTime > 43.6) {
-            std::cout << "testing\n";
-        }
         hangTime += 0.01;
         
         physics.compute_velocity();
@@ -184,8 +182,10 @@ int main(int argc, char** argv)
         
         distance = demo.ptHowitzer.getMetersX();
         altitude = demo.ptHowitzer.getMetersY();
-        std::cout << "Distance: " << distance << " Altitude:  " << altitude << " hang time: " << hangTime << "s \n";
+        
     }
+
+    std::cout << "Distance: " << distance << " Altitude:  " << altitude << " hang time: " << hangTime << "s \n";
 
 
    return 0;
