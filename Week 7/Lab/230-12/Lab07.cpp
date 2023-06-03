@@ -16,8 +16,10 @@
 #include "uiDraw.h"     // for RANDOM and DRAW*
 #include "ground.h"     // for GROUND
 #include "position.h"   // for POSITION
+
 #include "physics.h"    // for PHYSICS
 #include "trigonometry.h" // For Trig
+#include "angle.h"
 using namespace std;
 
 /*************************************************************************
@@ -53,7 +55,7 @@ public:
    Position  projectilePath[20];  // path of the projectile
    Position  ptHowitzer;          // location of the howitzer
    Position  ptUpperRight;        // size of the screen
-   double angle;                  // angle of the howitzer 
+   double angle;                  // angle of the howitzer
    double time;                   // amount of time since the last firing
 };
 
@@ -161,10 +163,28 @@ int main(int argc, char** argv)
 
    // set everything into action
    //ui.run(callBack, &demo);
-    demo.angle = 75;
+    Angle angleObj = Angle(75);
+    demo.angle = angleObj.getRadians();
+    demo.ptHowitzer = Position(0,0);
+    double distance;
+    double altitude;
+    double hangTime = 0.0;
     
-    for (int i = 0; i < 20; i++) {
+    Physics physics = Physics(827.0, demo.angle);
+    
+    
+    while (demo.ptHowitzer.getMetersY() > -0.1) {
+        if (hangTime > 43.6) {
+            std::cout << "testing\n";
+        }
+        hangTime += 0.01;
         
+        physics.compute_velocity();
+        demo.ptHowitzer = physics.compute_location(demo.ptHowitzer);
+        
+        distance = demo.ptHowitzer.getMetersX();
+        altitude = demo.ptHowitzer.getMetersY();
+        std::cout << "Distance: " << distance << " Altitude:  " << altitude << " hang time: " << hangTime << "s \n";
     }
 
 

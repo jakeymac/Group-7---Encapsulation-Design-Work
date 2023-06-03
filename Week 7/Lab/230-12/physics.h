@@ -7,8 +7,8 @@ public:
     Physics(double v, double radians)
     {
         
-        t = 1.0;
-        gravity = 0;
+        t = .01;
+        gravity = 9.8;
         dv = 0.0;
         ddx = 0.0;
         ddy = 0.0;
