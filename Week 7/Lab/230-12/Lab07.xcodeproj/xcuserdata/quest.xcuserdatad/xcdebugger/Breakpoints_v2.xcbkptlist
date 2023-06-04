@@ -14,74 +14,10 @@
             filePath = "Lab07.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "180"
-            endingLineNumber = "180"
+            startingLineNumber = "205"
+            endingLineNumber = "205"
             landmarkName = "main(argc, argv)"
             landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "EED43EA7-3873-49C5-923D-000C911DA745"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Lab07.cpp"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "178"
-            endingLineNumber = "178"
-            landmarkName = "main(argc, argv)"
-            landmarkType = "9">
-            <Locations>
-               <Location
-                  uuid = "EED43EA7-3873-49C5-923D-000C911DA745 - dc798af1f5203280"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "main"
-                  moduleName = "Lab07"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/quest/Desktop/Spring%202023/Encapsulation%20Design/Github%20Repo%20Work/Group-7---Encapsulation-Design-Work/Week%207/Lab/230-12/Lab07.cpp"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "178"
-                  endingLineNumber = "178"
-                  offsetFromSymbolStart = "335">
-               </Location>
-               <Location
-                  uuid = "EED43EA7-3873-49C5-923D-000C911DA745 - dc798af1f5203280"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "main"
-                  moduleName = "Lab07"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/quest/Desktop/Spring%202023/Encapsulation%20Design/Github%20Repo%20Work/Group-7---Encapsulation-Design-Work/Week%207/Lab/230-12/Lab07.cpp"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "178"
-                  endingLineNumber = "178"
-                  offsetFromSymbolStart = "269">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "0F70B550-79A6-448F-95C1-D448F2E07D08"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "physics.h"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
-            landmarkName = "getDragCoefficient(v, speedOfSound)"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

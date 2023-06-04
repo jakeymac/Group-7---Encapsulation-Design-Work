@@ -19,10 +19,10 @@ public:
         dy = Trigonometry::computeVerticalComponent(radians, v);
     }
 
-    void compute_physics(double radius, double mass)
+    void compute_physics(double radius, double mass,double density,double dragCoefficient)
     {
-        //double force = getDragForce(v, radius);
-        //compute_acceleration(force, mass);
+        double force = getDragForce(v, radius, density,dragCoefficient);
+        compute_acceleration(force, mass);
         compute_velocity();
         //radians = Trigonometry::getAngle(dx, dy);
     }
@@ -37,7 +37,7 @@ public:
         ddy = Trigonometry::computeVerticalComponent(radians, dv) * -1;
     }
 
-    void compute_velocity() 
+    void compute_velocity()
     {
         dx = dx - (ddx * t);
         dy = dy + (ddy * t);
@@ -57,9 +57,13 @@ public:
     double get_velocity() { return v; }
     
     double interpolation(double startX, double startY, double endX, double endY, double middleX) {
-        return startY + ((middleX -startX)  * (endY - startY)) / (endX - middleX);
+        return startY + ((middleX -startX)  * (endY - startY)) / (endX - startX);
     }
     
+    
+    double interpolationForX(double startX, double startY, double endX, double endY, double middleY) {
+        return startX + (((middleY - startY) * (endX - startX)) / (endY - startY));
+    }
     
     //Function to calculate density, speed of sound, gravity,
     
@@ -73,7 +77,7 @@ public:
         }
         return 0.0;
     }
-        
+    
     double findGravity(double altitude) {
         double altitudeList[14] = {0,1000,2000,3000,4000,5000,6000,7000,8000,9000,10000,150000,20000,25000};
         double gravityList[14] = {9.807,9.804,9.801,9.797,9.794,9.791,9.788,9.785,9.782,9.779,9.776,9.761,9.745,9.730};
@@ -96,8 +100,7 @@ public:
         return 0.0;
     }
     
-    double getDragCoefficient(double v, double speedOfSound) {
-        double start;
+    double getDragCoefficient(double speedOfSound) {
         double machSpeeds[16] = {0.3, 0.5, 0.7, 0.89, 0.92, 0.96, 0.98, 1.0, 1.02, 1.06, 1.24, 1.53,1.99,2.87,2.89,5.0};
         double dragCoefficient[16] = {0.1629, 0.1659, 0.2031,0.2597,0.3010,0.3287,0.4002,0.4258,0.4335,0.4483,0.4064,0.3663,0.2897,0.2297,0.2306,0.2656};
         for (int index = 0; index < 16; index++) {
@@ -108,12 +111,12 @@ public:
         return 0.0;
     }
 
-    double getDragForce(double v, double r)
+    double getDragForce(double v, double r,double density, double dragCoefficient)
         {
                    //drag co   density
                   //    |      |
                   //    V      V
-            return 0.5 * 0.3 * 0.6 * v * v * Trigonometry::areaOfCircle(r);
+            return 0.5 * dragCoefficient * density * v * v * Trigonometry::areaOfCircle(r);
         }
 private:
     double t;
@@ -126,3 +129,5 @@ private:
     double dx;          // Horizontal Velocity
     double dy;          // Vertical Velocity
 };
+
+

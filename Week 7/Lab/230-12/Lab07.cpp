@@ -163,30 +163,47 @@ int main(int argc, char** argv)
 
    // set everything into action
    //ui.run(callBack, &demo);
-    Angle angleObj = Angle(75);
-    demo.angle = angleObj.getRadians();
-    demo.ptHowitzer = Position(0,0);
-    double distance;
-    double altitude;
-    double hangTime = 0.0;
-    
-    Physics physics = Physics(827.0, demo.angle);
-    physics.applyGravity();
-    
-    
-    while (demo.ptHowitzer.getMetersY() > -0.1) {
-        hangTime += 0.01;
+    int angles[4] = {0, 30, 60, -45};
+    for (auto angle :angles)
+    {
+        std::cout << "Angle: " << angle << ": ";
+        Angle angleObj = Angle(angle);
+        demo.angle = angleObj.getRadians();
+        demo.ptHowitzer = Position(0,0);
+        double distance = 0.0;
+        double altitude= 0.0;
+        double density;
+        double speedOfSound;
+        double dragCoefficient;
         
-        physics.compute_physics(0.077445, 46.7);
-        demo.ptHowitzer = physics.compute_location(demo.ptHowitzer);
+        double hangTime = 0.0;
+        Position lastPosition = Position(0,0);
         
-        distance = demo.ptHowitzer.getMetersX();
-        altitude = demo.ptHowitzer.getMetersY();
+        Physics physics = Physics(827.0, demo.angle);
+        physics.applyGravity();
+        
+        
+        while (demo.ptHowitzer.getMetersY() > -0.1) {
+            hangTime += 0.01;
+            density = physics.findDensity(altitude);
+            speedOfSound = physics.speedOfSound(altitude);
+            dragCoefficient = physics.getDragCoefficient(speedOfSound);
+            
+            physics.compute_physics(0.077445, 46.7,density,dragCoefficient);
+            demo.ptHowitzer = physics.compute_location(demo.ptHowitzer);
+            
+            lastPosition.setMetersX(distance);
+            lastPosition.setMetersY(altitude);
+            
+            distance = demo.ptHowitzer.getMetersX();
+            altitude = demo.ptHowitzer.getMetersY();
+        }
+        
+        Position finalPosition = Position(0,0);
+        double x = physics.interpolationForX(lastPosition.getMetersX(), lastPosition.getMetersY(), distance, altitude, 0);
+        
+        std::cout << "Distance: " << x << " hang time: " << hangTime << "s \n";
         
     }
-
-    std::cout << "Distance: " << distance << " Altitude:  " << altitude << " hang time: " << hangTime << "s \n";
-
-
    return 0;
 }
