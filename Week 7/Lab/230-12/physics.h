@@ -9,6 +9,7 @@ public:
     {
         
         t = .01;
+        this->radians = radians;
         gravity = 9.8;
         dv = 0.0;
         ddx = 0.0;
@@ -18,20 +19,22 @@ public:
         dy = Trigonometry::computeVerticalComponent(radians, v);
     }
 
-    void compute_physics(double force, double mass, double radians) 
-    { 
-        compute_acceleration(force, mass, radians);
+    void compute_physics(double radius, double mass)
+    {
+        //double force = getDragForce(v, radius);
+        //compute_acceleration(force, mass);
         compute_velocity();
+        //radians = Trigonometry::getAngle(dx, dy);
     }
 
     double getGravity() { return gravity * t; }
     void applyGravity() { dy = dy - getGravity(); }
 
-    void compute_acceleration(double force, double mass, double radians) 
+    void compute_acceleration(double force, double mass)
     {
         dv = force / mass;
-        ddx = Trigonometry::computeHorizontalComponent(radians, dv);
-        ddy = Trigonometry::computeVerticalComponent(radians, dv);
+        ddx = Trigonometry::computeHorizontalComponent(radians, dv) * -1;
+        ddy = Trigonometry::computeVerticalComponent(radians, dv) * -1;
     }
 
     void compute_velocity() 
@@ -114,6 +117,7 @@ public:
         }
 private:
     double t;
+    double radians;
     double gravity;
     double dv;          // Delta Velocity a.k.a. Total Acceleration
     double ddx;         // Horizontal Acceleration
