@@ -177,7 +177,7 @@ int main(int argc, char** argv)
     while (demo.ptHowitzer.getMetersY() > -0.1) {
         hangTime += 0.01;
         
-        physics.compute_velocity();
+        physics.compute_physics(0.077445, 46.7);
         demo.ptHowitzer = physics.compute_location(demo.ptHowitzer);
         
         distance = demo.ptHowitzer.getMetersX();
