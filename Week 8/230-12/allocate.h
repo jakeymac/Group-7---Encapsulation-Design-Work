@@ -35,7 +35,7 @@ double * allocateArrayDouble(int num) {
 /****************************
  * DELETE ONE FLOAT
  ****************************/
-void deleteOneFloat(float * input) {
+void deleteOneFloat(float *&input) {
     if (input != nullptr) {
         delete input;
         input = nullptr;
@@ -47,7 +47,7 @@ void deleteOneFloat(float * input) {
 /****************************
  * DELETE ARRAY of DOUBLEs
  ****************************/
-void deleteArrayDouble(double * input) {
+void deleteArrayDouble(double *&input) {
     if (input != nullptr) {
         delete input;
         input = nullptr;
