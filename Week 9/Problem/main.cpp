@@ -49,7 +49,7 @@ void test_computePay() {
     //Negative wage
     try {
         computePay(1.0, -8.0);
-        assert(("This line of code should not have been reached, Negative wage should have thrown exception",false ));
+        assert(("This line of code should not have been reached, Negative wage should have thrown exception", false));
     }
     catch (string message) {
         assert(message == "Wage cannot be negative");
@@ -70,9 +70,108 @@ void test_computePay() {
 
 }
 
+class Percent
+{
+public:
+    double percent;              // stored in value 0.0 – 1.0
+    Percent() : percent(0.0) {}
+    double get() { return percent * 100.0; }
+    void set(double input)
+    {
+        if (input >= 0.0 && input <= 100.0)
+            percent = input / 100.0;
+    }
+};
+
+
+class TestPercent {
+public:
+    void test_getter() {
+    //Get default
+
+        //Setup
+        Percent myPercent = Percent();
+
+        //Exercise 
+        double returnValue = myPercent.get();
+
+        //Verify
+        assert(returnValue == 0.0);
+        assert(myPercent.percent == 0.0);
+
+    //Get 50%
+
+        //Setup
+        Percent myPercent = Percent();
+
+        //Exercise 
+        double returnValue = myPercent.get();
+
+        //Verify
+        assert(returnValue == 0.0);
+        assert(myPercent.percent == 0.0);
+
+    //Get 100%
+
+        //Setup
+        Percent myPercent = Percent();
+        myPercent.percent = 1.0;
+
+        //Exercise 
+        double returnValue = myPercent.get();
+
+        //Verify
+        assert(returnValue == 100.0);
+        assert(myPercent.percent == 1.0);
+
+    }
+
+    void test_setter() {
+    //Set 50%
+
+        //Setup
+        Percent myPercent = Percent();
+
+        //Exercise 
+        myPercent.set(50.0);
+
+        //Verify
+        assert(myPercent.percent == 0.5);
+
+    //Set 100%
+
+        //Setup
+        Percent myPercent = Percent();
+
+        //Exercise 
+        myPercent.set(100.0);
+
+        //Verify
+        assert(myPercent.percent == 1.0);
+
+    //Higher than 100%
+
+        //Setup
+        Percent myPercent = Percent();
+
+        try {
+            //Exercise 
+            myPercent.set(101.0);
+
+            //Verify
+            assert(("This line of code should not be reached, set(101.0) should throw exception", false));
+        }
+        catch (string message) {
+            assert(message == "Percent cannot be greater than 100");
+        }
+    }
+};
+
 int main()
 {
-    test_computePay();
+    //test_computePay();
+    TestPercent test = TestPercent();
+    test.test_getter();
 
     return 0;
 }
