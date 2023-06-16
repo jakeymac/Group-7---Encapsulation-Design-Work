@@ -186,8 +186,8 @@ public:
 int main()
 {
     //test_computePay();
-    TestPercent test = TestPercent();
-    test.test_getter();
+    //TestPercent test = TestPercent();
+    //test.test_getter();
 
     return 0;
 }
