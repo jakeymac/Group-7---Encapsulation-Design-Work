@@ -164,6 +164,22 @@ public:
         catch (string message) {
             assert(message == "Percent cannot be greater than 100");
         }
+
+    //Higher than 100%
+
+        //Setup
+        Percent myPercent = Percent();
+
+        try {
+            //Exercise 
+            myPercent.set(-1.0);
+
+            //Verify
+            assert(("This line of code should not be reached, set(-1.0) should throw exception", false));
+        }
+        catch (string message) {
+            assert(message == "Percent cannot be less than 0");
+        }
     }
 };
 
