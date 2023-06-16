@@ -165,7 +165,7 @@ public:
             assert(message == "Percent cannot be greater than 100");
         }
 
-    //Higher than 100%
+    //Less than 0%
 
         //Setup
         Percent myPercent = Percent();
