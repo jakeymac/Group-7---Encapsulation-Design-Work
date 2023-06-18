@@ -94,14 +94,14 @@ map<double, double> machToC = {
 {5,	0.2656}
 };
 
-    void Tester::run() {
+    void PhysicsTester::run() {
         test_interpolation();
         test_constructor();
         cout << "all tests passed" << endl;
     }
 
 
-    void Tester::test_interpolation() {
+    void PhysicsTester::test_interpolation() {
         Bullet b = Bullet(0.523599, 0, 0);
         //First entry in table
         assert(b.interpolation(0, altitudeToDensity) == 1.225);
@@ -131,7 +131,7 @@ map<double, double> machToC = {
 
 
     }
-    void Tester::test_constructor() {
+    void PhysicsTester::test_constructor() {
         //Whiteboard demo
         Bullet b = Bullet(0.523599, 0, 0);
         assert(b.v == 827);
@@ -224,5 +224,166 @@ map<double, double> machToC = {
 
     }
 };
+
+
+void AngleTester::run() {
+    testConstructor();
+    testGetDegrees();
+    testGetRadians();
+    testSetDegrees();
+    testSetRadians();
+    testNormalize();
+}
+
+
+void AngleTester::testConstructor() {
+    Angle tester = Angle();
+    assert(tester.radians == 0.0);
+    delete tester;
+    
+    Angle tester = Angle(120);
+    assert(tester.radians == 2.094);
+    delete tester;
+    
+    Angle tester = Angle(430);
+    assert(tester.radians == 7.505);
+    delete tester;
+    
+    Angle tester = Angle(0);
+    assert(tester.radians == 0.0);
+    delete tester;
+    
+    Angle tester = Angle(-120);
+    assert(tester.radians == -2.094);
+    delete tester;
+    
+    Angle tester = Angle(720);
+    assert(tester.radians == 12.566);
+    delete tester;
+}
+
+void AngleTester::testGetDegrees() {
+    Angle tester = Angle();
+    
+    tester.radians = 0.0;
+    assert(tester.getDegrees() == 0.0);
+    
+    tester.radians = 10.0;
+    assert(tester.getDegrees() == 572.958);
+    
+    tester.radians = -15.0;
+    assert(tester.getDegrees() == -859.437);
+    
+    tester.radians = 2.0;
+    assert(tester.getDegrees() == 114.592);
+    
+    tester.radians = 3.7;
+    assert(tester.getDegrees() == 211.994);
+    
+    tester.radians = 4.3;
+    assert(tester.getDegrees() == 246.372);
+    
+    delete tester;
+}
+
+void AngleTester::testGetRadians() {
+    Angle tester = Angle();
+    
+    tester.radians = 0.0;
+    assert(tester.getRadians() == 0.0);
+    
+    tester.radians = 10.0;
+    assert(tester.getRadians() == 10.0);
+    
+    tester.radians = -15.0;
+    assert(tester.getRadians() == -15.0);
+    
+    tester.radians = 2.0;
+    assert(tester.getRadians() == 2.0);
+    
+    tester.radians = 3.7;
+    assert(tester.getRadians() == 3.7);
+    
+    tester.radians = 4.3;
+    assert(tester.getRadians() == 4.3);
+    
+    delete tester;
+}
+
+void AngleTester::testSetDegrees() {
+    Angle tester = Angle();
+    
+    tester.setDegrees(0.0);
+    assert(tester.radians == 0.0);
+    assert(tester.getDegrees() == 0.0);
+    
+    tester.setDegrees(5.0);
+    assert(tester.radians == 0.087);
+    assert(tester.getDegrees() == 5.0);
+    
+    tester.setDegrees(360.0);
+    assert(tester.radians == 6.283);
+    assert(tester.getDegrees() == 360.0);
+    
+    tester.setDegrees(-125.0);
+    assert(tester.radians == -2.181);
+    assert(tester.getDegrees() == -125.0);
+    
+    tester.setDegrees(290.3);
+    assert(tester.radians == 5.067);
+    assert(tester.getDegrees() == 290.3);
+    
+    tester.setDegrees(39.25);
+    assert(tester.radians == 0.685);
+    assert(tester.getDegrees() == 39.25);
+    
+    tester.setDegrees(-212.3);
+    assert(tester.radians == -3.705);
+    assert(tester.getDegrees() == -212.3);
+    
+    delete tester;
+}
+
+
+void AngleTester::testSetRadians() {
+    Angle tester = Angle();
+    
+    tester.setRadians(0.0);
+    assert(tester.radians == 0.0);
+    
+    tester.setRadians(5.0);
+    assert(tester.radians == 5.0);
+    
+    tester.setRadians(3.0);
+    assert(tester.radians == 3.0;
+    
+    tester.setRadians(-15.3);
+    assert(tester.radians == -15.3);
+    
+    tester.setRadians(2.9);
+    assert(tester.radians == 2.9);
+
+    tester.setRadians(-1.5);
+    assert(tester.radians == -1.5);
+    
+    tester.setRadians(-2);
+    assert(tester.radians == -2);
+    
+    delete tester;
+}
+
+void AngleTester::testNormalize() {
+        Angle tester = Angle();
+        
+        assert(tester.normalize(0.0) == 0.0);
+        assert(tester.normalize(3.142) == 3.142);
+        assert(tester.normalize(6.283) == 6.283);
+        assert(tester.normalize(5.2) == 5.2);
+        assert(tester.normalize(15.0) == 2.434);
+        assert(tester.normalize(-3.142) == -3.142);
+        assert(tester.normalize(-5.2) == -5.2);
+        
+        delete tester;
+    }
 
 
