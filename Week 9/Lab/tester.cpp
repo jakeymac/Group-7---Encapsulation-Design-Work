@@ -233,6 +233,7 @@ void AngleTester::run() {
     testSetDegrees();
     testSetRadians();
     testNormalize();
+    std::cout << "All tests passed" << std::endl;
 }
 
 
