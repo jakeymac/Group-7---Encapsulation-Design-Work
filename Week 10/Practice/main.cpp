@@ -1,14 +1,17 @@
 /*************************************************************
  * 1. Name:
- *      -your name-
+ *      Jacob Johnson and Jaden Myers
  * 2. Assignment Name:
  *      Practice 10: Exceptions
  * 3. Assignment Description:
  *      Throwing and catching exceptions
  * 4. What was the hardest part? Be as specific as possible.
- *      -a paragraph or two about how the assignment went for you-
+ *      The hardest part was understanding exactly what the assignment was wanting.
+ *      In the end we figured that the assignment was asking us to put all the if 
+ *      statements into a try block and then put cout message and return -1 in the 
+ *      catch block.
  * 5. How long did it take for you to complete the assignment?
- *      -total time in hours: reading the assignment, submitting, etc.
+ *      15 minutes
  **************************************************************/
 
 #include <iostream>
