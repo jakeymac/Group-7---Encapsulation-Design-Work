@@ -1,0 +1,29 @@
+   for (char row = '1'; row < '9'; row++) {
+        for (char col = 'a'; col < 'i'; col++) {
+            int position = (row - '1') * 8 + (col - 'a');
+
+            string lowerAlphaNum = "";
+            lowerAlphaNum += col;
+            lowerAlphaNum += row;
+
+            string lowerNumAlpha = "";
+            lowerNumAlpha += row;
+            lowerNumAlpha += col;
+
+            char upper = (char)toupper(col);
+
+            string upperAlphaNum = "";
+            upperAlphaNum += upper;
+            upperAlphaNum += row;
+
+            string upperNumAlpha = "";
+            upperNumAlpha += row;
+            upperNumAlpha += upper;
+
+            assert(getPosition(lowerAlphaNum.c_str()) == position);
+            assert(getPosition(lowerNumAlpha.c_str()) == position);
+            assert(getPosition(upperAlphaNum.c_str()) == position);
+            assert(getPosition(upperNumAlpha.c_str()) == position);
+
+        }
+    }
