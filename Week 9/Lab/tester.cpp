@@ -14,9 +14,9 @@
 #include "physics.h"
 #include "tester.h"
 
-using namespace std;
 
-map<double, double> altitudeToDensity = {
+
+std::map<double, double> altitudeToDensity = {
     {0,	1.225},
 {1000,	1.112},
 {2000,	1.007},
@@ -39,7 +39,7 @@ map<double, double> altitudeToDensity = {
 {80000,	0.0000185}
 };
 
-map<double, double> altitudeToGravity = {
+std::map<double, double> altitudeToGravity = {
     {0,	9.807},
 {1000,	9.804},
 {2000,	9.801},
@@ -56,7 +56,7 @@ map<double, double> altitudeToGravity = {
 {25000,	9.73}
 };
 
-map<double, double> altitudeToSound{
+std::map<double, double> altitudeToSound{
     {0,	340},
 {1000,	336},
 {2000,	332},
@@ -75,7 +75,7 @@ map<double, double> altitudeToSound{
 {40000,	324},
 };
 
-map<double, double> machToC = {
+std::map<double, double> machToC = {
     {0.3,	0.1629},
 {0.5,	0.1659},
 {0.7,	0.2031},
@@ -97,7 +97,7 @@ map<double, double> machToC = {
     void PhysicsTester::run() {
         test_interpolation();
         test_constructor();
-        cout << "all tests passed" << endl;
+        std::cout << "all tests passed" << endl;
     }
 
 
