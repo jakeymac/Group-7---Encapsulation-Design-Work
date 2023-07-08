@@ -105,7 +105,11 @@ void callBack(const Interface* pUI, void* p)
    //
 
    // advance time by half a second.
-   pDemo->time += 0.5;
+    if (!pDemo->bullets.empty()) {
+        pDemo->time += 0.5;
+    } else {
+        pDemo->time = 0.0;
+    }
 
    // move the projectiles across the screen
    for (Bullet &bullet : pDemo->bullets) {
