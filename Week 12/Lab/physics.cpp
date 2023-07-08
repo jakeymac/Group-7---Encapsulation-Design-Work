@@ -131,6 +131,10 @@ bool Physics::hitGround()
     return pGround->getElevationMeters(Position(x, y)) >= y || computeDistance(pGround->getTarget(), Position(x, y)) < 250.0;
 }
 
+bool Physics::hitTarget() {
+    return abs(pGround->getTarget().getPixelsX() - x) < 10;
+}
+
 void Physics::advance() {
     x = x + dx * t;
     y = y + dy * t;

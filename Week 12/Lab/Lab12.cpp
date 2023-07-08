@@ -19,6 +19,7 @@
 #include "ground.h"     // for GROUND
 #include "position.h"   // for POSITION
 #include "bullet.h"
+#include <cstdlib>
 using namespace std;
 
 /*************************************************************************
@@ -34,8 +35,13 @@ public:
       time(0.0),
       angle(0.0)
    {
+       int randNum = rand();
+       int length = Position(ptUpperRight).getPixelsX();
+       double randX = (randNum % length) + 5.0;
+       
+       
       // Set the horizontal position of the howitzer. This should be random.
-      ptHowitzer.setPixelsX(Position(ptUpperRight).getPixelsX() / 2.0);
+      ptHowitzer.setPixelsX(randX);
 
       // Generate the ground and set the vertical position of the howitzer.
       ground.reset(ptHowitzer);
@@ -120,7 +126,7 @@ void callBack(const Interface* pUI, void* p)
            if (bullet.getStreakPath().size() == 19) {
                // TODO: replace the cout statements with the actual game mechanics of hitting the target
                cout << "Distance from target: " << distance << endl;
-               if (distance < 250.0) {
+               if (distance < 290.0) {
                    cout << "Dude, you hit it!" << endl;
                }
            }

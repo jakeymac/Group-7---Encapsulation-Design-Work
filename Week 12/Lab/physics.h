@@ -26,6 +26,7 @@ public:
     Physics(double radians, Position p, Ground *pGround);
     void advance();
     bool hitGround();
+    bool hitTarget();
     Position getPosition() { return Position(x, y); }
     list<Position> distanceToAltitude;
 

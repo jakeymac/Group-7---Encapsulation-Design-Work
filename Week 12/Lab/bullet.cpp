@@ -25,8 +25,12 @@ void Bullet::advance() {
     if (!physics.hitGround()) {
         physics.advance();
     }
+    
     else {
         impactPos = physics.getPosition();
+        if (physics.hitTarget()) {
+            std::cout << "HITTTT\n";
+        }
     }
 
     if (physics.distanceToAltitude.size() > 0) {
