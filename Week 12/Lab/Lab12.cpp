@@ -6,9 +6,9 @@
  * 3. Assignment Description:
  *       all the functionality has been added and there are just a few bugs to work out. 
  * 4. What was the hardest part? Be as specific as possible.
- *      ??
+ *      The hardest part was implementing the bullet movement and collision detection.
  * 5. How long did it take for you to complete the assignment?
- *      ??
+ *      This assignment took about 3 hours to complete
  *****************************************************************/
 
 #include <iostream>
@@ -26,6 +26,7 @@ using namespace std;
  * Demo
  * Test structure to capture the LM that will move around the screen
  *************************************************************************/
+
 class Demo
 {
 public:
@@ -131,7 +132,8 @@ void callBack(const Interface* pUI, void* p)
                // TODO: replace the cout statements with the actual game mechanics of hitting the target
                cout << "Distance from target: " << distance << endl;
                if (distance < 290.0) {
-                   cout << "Dude, you hit it!" << endl;
+                   cout << "Target Hit\n";
+                   
                }
            }
        }
@@ -175,6 +177,8 @@ void callBack(const Interface* pUI, void* p)
    gout.precision(1);
    gout << "Time since the bullet was fired: "
         << pDemo->time << "s\n";
+    
+
 }
 
 double Position::metersFromPixels = 40.0;
