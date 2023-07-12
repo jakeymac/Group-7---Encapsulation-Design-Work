@@ -11,6 +11,8 @@
 * 5. How long did it take for you to complete the assignment?
 * 2 hours, including reading, implementing and revising
 **************************************************************/
+
+/* Week 3*/
 #pragma once
 #define TWO_PI 6.28318530718
 #include <math.h> // for floor()

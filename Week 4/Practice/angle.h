@@ -10,6 +10,8 @@
 * 5. How long did it take for you to complete the assignment?
 * - This assignment took about a half hour.
 **************************************************************/
+
+/* Week 4*/
 #pragma once
 #define TWO_PI 6.28318530718
 #include <math.h> // for floor()
