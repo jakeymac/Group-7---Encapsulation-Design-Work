@@ -10,9 +10,9 @@
 
 #pragma once
 
-#include "position.h"
-#include "ground.h"
-#include "physics.h"
+#include "position.hpp"
+#include "ground.hpp"
+#include "physics.hpp"
 #include <list>
 #include <iterator>
 

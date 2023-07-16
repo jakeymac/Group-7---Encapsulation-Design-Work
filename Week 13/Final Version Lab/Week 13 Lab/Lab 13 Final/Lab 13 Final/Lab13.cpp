@@ -14,17 +14,17 @@
  * 5. How long did it take for you to complete the assignment?
  *      2-3 hours.
  *****************************************************************/
-#define _USE_MATH_DEFINES 
+#define _USE_MATH_DEFINES
 #include <cmath>
 #include <iostream>
 #include <cassert>      // for ASSERT
 #include <list>
-#include "uiInteract.h" // for INTERFACE
-#include "uiDraw.h"     // for RANDOM and DRAW*
-#include "ground.h"     // for GROUND
-#include "position.h"   // for POSITION
-#include "bullet.h"
-#include "angle.h"
+#include "uiInteract.hpp" // for INTERFACE
+#include "uiDraw.hpp"     // for RANDOM and DRAW*
+#include "ground.hpp"     // for GROUND
+#include "position.hpp"   // for POSITION
+#include "bullet.hpp"
+#include "angle.hpp"
 using namespace std;
 
 /*************************************************************************
@@ -69,7 +69,7 @@ public:
    //Position  projectilePath[20];  // path of the projectile
    Position  ptHowitzer;          // location of the howitzer
    Position  ptUpperRight;        // size of the screen
-   double angle;                  // angle of the howitzer 
+   double angle;                  // angle of the howitzer
    double time;                   // amount of time since the last firing
 };
 
@@ -83,7 +83,7 @@ public:
 void callBack(const Interface* pUI, void* p)
 {
    // the first step is to cast the void pointer into a game object. This
-   // is the first step of every single callback function in OpenGL. 
+   // is the first step of every single callback function in OpenGL.
    Demo* pDemo = (Demo*)p;
 
    //
@@ -130,7 +130,7 @@ void callBack(const Interface* pUI, void* p)
            assert(bullet.getImpactPosition().getPixelsY() <= pDemo->ground.getElevationMeters(bullet.getImpactPosition()));
            // We are only checking the size of the streak because a bullet actually lives for 20 frames after impact.
            // This extra life span gives us time to finish drawing the streak (if we missed the target.)
-           // By checking if the size of the streak path is 19, we are basically making it so that we only run this 
+           // By checking if the size of the streak path is 19, we are basically making it so that we only run this
            // code once: the moment it makes impact.
            if (bullet.getStreakPath().size() == 19) {
                if (distance < 250.0) {
