@@ -1,0 +1,312 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BA4AD02B2A630AE6009BF053 /* Lab13.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA4AD02A2A630AE6009BF053 /* Lab13.cpp */; };
+		BA4AD02D2A630AF0009BF053 /* ground.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA4AD02C2A630AF0009BF053 /* ground.cpp */; };
+		BA4AD02F2A630AF3009BF053 /* bullet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA4AD02E2A630AF3009BF053 /* bullet.cpp */; };
+		BA4AD0322A630AFC009BF053 /* physics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA4AD0312A630AFC009BF053 /* physics.cpp */; };
+		BA4AD0352A630B1B009BF053 /* position.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA4AD0342A630B1A009BF053 /* position.cpp */; };
+		BA4AD0382A630B22009BF053 /* uiDraw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA4AD0372A630B22009BF053 /* uiDraw.cpp */; };
+		BA4AD03B2A630B2D009BF053 /* uiInteract.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA4AD03A2A630B2C009BF053 /* uiInteract.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BA4AD01E2A630AD8009BF053 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		BA4AD0202A630AD8009BF053 /* Week 13 Lab */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Week 13 Lab"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA4AD02A2A630AE6009BF053 /* Lab13.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Lab13.cpp; path = ../../Lab13.cpp; sourceTree = "<group>"; };
+		BA4AD02C2A630AF0009BF053 /* ground.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ground.cpp; path = ../../ground.cpp; sourceTree = "<group>"; };
+		BA4AD02E2A630AF3009BF053 /* bullet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = bullet.cpp; path = ../../bullet.cpp; sourceTree = "<group>"; };
+		BA4AD0302A630AF7009BF053 /* bullet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = bullet.h; path = ../../bullet.h; sourceTree = "<group>"; };
+		BA4AD0312A630AFC009BF053 /* physics.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = physics.cpp; path = ../../physics.cpp; sourceTree = "<group>"; };
+		BA4AD0332A630B01009BF053 /* physics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = physics.h; path = ../../physics.h; sourceTree = "<group>"; };
+		BA4AD0342A630B1A009BF053 /* position.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = position.cpp; path = "../../../../Week 12/Lab/Week 12 Lab/position.cpp"; sourceTree = "<group>"; };
+		BA4AD0362A630B1E009BF053 /* position.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = position.h; path = "../../../../Week 12/Lab/Week 12 Lab/position.h"; sourceTree = "<group>"; };
+		BA4AD0372A630B22009BF053 /* uiDraw.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = uiDraw.cpp; path = "../../../../Week 12/Lab/Week 12 Lab/uiDraw.cpp"; sourceTree = "<group>"; };
+		BA4AD0392A630B26009BF053 /* uiDraw.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = uiDraw.h; path = "../../../../Week 12/Lab/Week 12 Lab/uiDraw.h"; sourceTree = "<group>"; };
+		BA4AD03A2A630B2C009BF053 /* uiInteract.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = uiInteract.cpp; path = "../../../../Week 12/Lab/Week 12 Lab/uiInteract.cpp"; sourceTree = "<group>"; };
+		BA4AD03C2A630B31009BF053 /* uiInteract.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = uiInteract.h; path = "../../../../Week 12/Lab/Week 12 Lab/uiInteract.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BA4AD01D2A630AD8009BF053 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BA4AD0172A630AD8009BF053 = {
+			isa = PBXGroup;
+			children = (
+				BA4AD0222A630AD8009BF053 /* Week 13 Lab */,
+				BA4AD0212A630AD8009BF053 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BA4AD0212A630AD8009BF053 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BA4AD0202A630AD8009BF053 /* Week 13 Lab */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BA4AD0222A630AD8009BF053 /* Week 13 Lab */ = {
+			isa = PBXGroup;
+			children = (
+				BA4AD02A2A630AE6009BF053 /* Lab13.cpp */,
+				BA4AD02C2A630AF0009BF053 /* ground.cpp */,
+				BA4AD02E2A630AF3009BF053 /* bullet.cpp */,
+				BA4AD0302A630AF7009BF053 /* bullet.h */,
+				BA4AD0312A630AFC009BF053 /* physics.cpp */,
+				BA4AD0332A630B01009BF053 /* physics.h */,
+				BA4AD0342A630B1A009BF053 /* position.cpp */,
+				BA4AD0362A630B1E009BF053 /* position.h */,
+				BA4AD0372A630B22009BF053 /* uiDraw.cpp */,
+				BA4AD0392A630B26009BF053 /* uiDraw.h */,
+				BA4AD03A2A630B2C009BF053 /* uiInteract.cpp */,
+				BA4AD03C2A630B31009BF053 /* uiInteract.h */,
+			);
+			path = "Week 13 Lab";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BA4AD01F2A630AD8009BF053 /* Week 13 Lab */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA4AD0272A630AD8009BF053 /* Build configuration list for PBXNativeTarget "Week 13 Lab" */;
+			buildPhases = (
+				BA4AD01C2A630AD8009BF053 /* Sources */,
+				BA4AD01D2A630AD8009BF053 /* Frameworks */,
+				BA4AD01E2A630AD8009BF053 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Week 13 Lab";
+			productName = "Week 13 Lab";
+			productReference = BA4AD0202A630AD8009BF053 /* Week 13 Lab */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BA4AD0182A630AD8009BF053 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					BA4AD01F2A630AD8009BF053 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+				};
+			};
+			buildConfigurationList = BA4AD01B2A630AD8009BF053 /* Build configuration list for PBXProject "Week 13 Lab" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BA4AD0172A630AD8009BF053;
+			productRefGroup = BA4AD0212A630AD8009BF053 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BA4AD01F2A630AD8009BF053 /* Week 13 Lab */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BA4AD01C2A630AD8009BF053 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA4AD02D2A630AF0009BF053 /* ground.cpp in Sources */,
+				BA4AD02F2A630AF3009BF053 /* bullet.cpp in Sources */,
+				BA4AD02B2A630AE6009BF053 /* Lab13.cpp in Sources */,
+				BA4AD03B2A630B2D009BF053 /* uiInteract.cpp in Sources */,
+				BA4AD0322A630AFC009BF053 /* physics.cpp in Sources */,
+				BA4AD0352A630B1B009BF053 /* position.cpp in Sources */,
+				BA4AD0382A630B22009BF053 /* uiDraw.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		BA4AD0252A630AD8009BF053 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		BA4AD0262A630AD8009BF053 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		BA4AD0282A630AD8009BF053 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BA4AD0292A630AD8009BF053 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BA4AD01B2A630AD8009BF053 /* Build configuration list for PBXProject "Week 13 Lab" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA4AD0252A630AD8009BF053 /* Debug */,
+				BA4AD0262A630AD8009BF053 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA4AD0272A630AD8009BF053 /* Build configuration list for PBXNativeTarget "Week 13 Lab" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA4AD0282A630AD8009BF053 /* Debug */,
+				BA4AD0292A630AD8009BF053 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BA4AD0182A630AD8009BF053 /* Project object */;
+}

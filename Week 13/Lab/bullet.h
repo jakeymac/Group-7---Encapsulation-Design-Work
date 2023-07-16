@@ -35,9 +35,11 @@ public:
     double getHangTime();
     bool hitGround();
     
+    
 private:
     list<Position> streakPath;
     Physics physics;
     Position impactPos;
     Position startPos;
+    double startAngle;
 };

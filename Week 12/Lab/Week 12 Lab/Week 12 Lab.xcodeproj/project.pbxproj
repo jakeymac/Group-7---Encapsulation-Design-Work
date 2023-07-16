@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA4AD03E2A630F19009BF053 /* bullet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA4AD03D2A630F19009BF053 /* bullet.cpp */; };
+		BA4AD0412A630F5C009BF053 /* ground.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA4AD0402A630F5C009BF053 /* ground.cpp */; };
+		BA4AD0432A630F69009BF053 /* Lab13.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA4AD0422A630F69009BF053 /* Lab13.cpp */; };
+		BA4AD0452A630F77009BF053 /* physics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA4AD0442A630F77009BF053 /* physics.cpp */; };
 		BA7EF1092A59C480003C52CF /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA7EF1082A59C480003C52CF /* GLUT.framework */; };
 		BA7EF10B2A59C487003C52CF /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA7EF10A2A59C487003C52CF /* OpenGL.framework */; };
-		BA7EF1122A59C4A7003C52CF /* bullet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA7EF10F2A59C4A7003C52CF /* bullet.cpp */; };
-		BA7EF1132A59C4A7003C52CF /* Lab12.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA7EF1102A59C4A7003C52CF /* Lab12.cpp */; };
-		BA7EF1142A59C4A7003C52CF /* physics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA7EF1112A59C4A7003C52CF /* physics.cpp */; };
 		BA7EF1172A59C59F003C52CF /* position.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA7EF1162A59C59F003C52CF /* position.cpp */; };
-		BA7EF1192A59C5C3003C52CF /* ground.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA7EF1182A59C5C3003C52CF /* ground.cpp */; };
 		BA7EF11D2A59C607003C52CF /* uiInteract.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA7EF11B2A59C607003C52CF /* uiInteract.cpp */; };
 		BA7EF1202A59C616003C52CF /* uiDraw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA7EF11E2A59C616003C52CF /* uiDraw.cpp */; };
 /* End PBXBuildFile section */
@@ -31,23 +31,24 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BA4AD03D2A630F19009BF053 /* bullet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = bullet.cpp; path = "../../../../Week 13/Lab/bullet.cpp"; sourceTree = "<group>"; };
+		BA4AD03F2A630F4A009BF053 /* bullet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = bullet.h; path = "../../../../Week 13/Lab/bullet.h"; sourceTree = "<group>"; };
+		BA4AD0402A630F5C009BF053 /* ground.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ground.cpp; path = "../../../../Week 13/Lab/ground.cpp"; sourceTree = "<group>"; };
+		BA4AD0422A630F69009BF053 /* Lab13.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Lab13.cpp; path = "../../../../Week 13/Lab/Lab13.cpp"; sourceTree = "<group>"; };
+		BA4AD0442A630F77009BF053 /* physics.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = physics.cpp; path = "../../../../Week 13/Lab/physics.cpp"; sourceTree = "<group>"; };
+		BA4AD0462A630FA4009BF053 /* physics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = physics.h; path = "../../../../Week 13/Lab/physics.h"; sourceTree = "<group>"; };
 		BA7EF0FD2A59C46E003C52CF /* Week 12 Lab */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Week 12 Lab"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA7EF1082A59C480003C52CF /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
 		BA7EF10A2A59C487003C52CF /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
-		BA7EF10C2A59C4A7003C52CF /* physics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = physics.h; path = ../../physics.h; sourceTree = "<group>"; };
-		BA7EF10D2A59C4A7003C52CF /* bullet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bullet.h; path = ../../bullet.h; sourceTree = "<group>"; };
 		BA7EF10E2A59C4A7003C52CF /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = readme.md; path = ../../readme.md; sourceTree = "<group>"; };
-		BA7EF10F2A59C4A7003C52CF /* bullet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = bullet.cpp; path = ../../bullet.cpp; sourceTree = "<group>"; };
-		BA7EF1102A59C4A7003C52CF /* Lab12.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Lab12.cpp; path = ../../Lab12.cpp; sourceTree = "<group>"; };
-		BA7EF1112A59C4A7003C52CF /* physics.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = physics.cpp; path = ../../physics.cpp; sourceTree = "<group>"; };
 		BA7EF1152A59C58B003C52CF /* position.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = position.h; path = "../../../../Week 7/Lab/230-12/position.h"; sourceTree = "<group>"; };
 		BA7EF1162A59C59F003C52CF /* position.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = position.cpp; path = "../../../../Week 7/Lab/230-12/position.cpp"; sourceTree = "<group>"; };
-		BA7EF1182A59C5C3003C52CF /* ground.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ground.cpp; path = "../../../../Week 7/Lab/230-12/ground.cpp"; sourceTree = "<group>"; };
 		BA7EF11A2A59C5DC003C52CF /* ground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ground.h; path = "../../../../Week 7/Lab/230-12/ground.h"; sourceTree = "<group>"; };
 		BA7EF11B2A59C607003C52CF /* uiInteract.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = uiInteract.cpp; path = "../../../../Week 7/Lab/230-12/uiInteract.cpp"; sourceTree = "<group>"; };
 		BA7EF11C2A59C607003C52CF /* uiInteract.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = uiInteract.h; path = "../../../../Week 7/Lab/230-12/uiInteract.h"; sourceTree = "<group>"; };
 		BA7EF11E2A59C616003C52CF /* uiDraw.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = uiDraw.cpp; path = "../../../../Week 7/Lab/230-12/uiDraw.cpp"; sourceTree = "<group>"; };
 		BA7EF11F2A59C616003C52CF /* uiDraw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = uiDraw.h; path = "../../../../Week 7/Lab/230-12/uiDraw.h"; sourceTree = "<group>"; };
+		BAB6444C2A6333310032CB0E /* angle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = angle.h; path = ../../../Practice/angle.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,17 +86,18 @@
 			children = (
 				BA7EF1152A59C58B003C52CF /* position.h */,
 				BA7EF1162A59C59F003C52CF /* position.cpp */,
-				BA7EF10F2A59C4A7003C52CF /* bullet.cpp */,
-				BA7EF10D2A59C4A7003C52CF /* bullet.h */,
-				BA7EF1102A59C4A7003C52CF /* Lab12.cpp */,
+				BAB6444C2A6333310032CB0E /* angle.h */,
+				BA4AD03D2A630F19009BF053 /* bullet.cpp */,
 				BA7EF11E2A59C616003C52CF /* uiDraw.cpp */,
 				BA7EF11F2A59C616003C52CF /* uiDraw.h */,
-				BA7EF1112A59C4A7003C52CF /* physics.cpp */,
 				BA7EF11A2A59C5DC003C52CF /* ground.h */,
+				BA4AD03F2A630F4A009BF053 /* bullet.h */,
 				BA7EF11B2A59C607003C52CF /* uiInteract.cpp */,
 				BA7EF11C2A59C607003C52CF /* uiInteract.h */,
-				BA7EF1182A59C5C3003C52CF /* ground.cpp */,
-				BA7EF10C2A59C4A7003C52CF /* physics.h */,
+				BA4AD0422A630F69009BF053 /* Lab13.cpp */,
+				BA4AD0442A630F77009BF053 /* physics.cpp */,
+				BA4AD0402A630F5C009BF053 /* ground.cpp */,
+				BA4AD0462A630FA4009BF053 /* physics.h */,
 				BA7EF10E2A59C4A7003C52CF /* readme.md */,
 			);
 			path = "Week 12 Lab";
@@ -167,13 +169,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA7EF1132A59C4A7003C52CF /* Lab12.cpp in Sources */,
-				BA7EF1142A59C4A7003C52CF /* physics.cpp in Sources */,
+				BA4AD0412A630F5C009BF053 /* ground.cpp in Sources */,
 				BA7EF1202A59C616003C52CF /* uiDraw.cpp in Sources */,
+				BA4AD03E2A630F19009BF053 /* bullet.cpp in Sources */,
+				BA4AD0452A630F77009BF053 /* physics.cpp in Sources */,
 				BA7EF1172A59C59F003C52CF /* position.cpp in Sources */,
-				BA7EF1122A59C4A7003C52CF /* bullet.cpp in Sources */,
-				BA7EF1192A59C5C3003C52CF /* ground.cpp in Sources */,
 				BA7EF11D2A59C607003C52CF /* uiInteract.cpp in Sources */,
+				BA4AD0432A630F69009BF053 /* Lab13.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

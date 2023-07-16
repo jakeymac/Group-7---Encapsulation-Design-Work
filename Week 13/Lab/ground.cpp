@@ -102,7 +102,12 @@ Position Ground::getTarget() const
        iHowitzer = width;
    }
 
-   assert(iHowitzer >= 0 && iHowitzer < width);
+ assert(iHowitzer >= 0 && iHowitzer < width);
+ if (iHowitzer < width / 2) {
+     assert(iTarget > width / 2);
+ } else {
+     assert(iTarget < width / 2);
+ }
 
    // determine the maximum and minimum altitude
    Position posMinimum(0.0, MIN_ALTITUDE);

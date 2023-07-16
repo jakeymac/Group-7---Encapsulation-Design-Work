@@ -24,6 +24,7 @@
 #include "ground.h"     // for GROUND
 #include "position.h"   // for POSITION
 #include "bullet.h"
+#include "angle.h"
 using namespace std;
 
 /*************************************************************************
@@ -125,7 +126,8 @@ void callBack(const Interface* pUI, void* p)
    for (Bullet& bullet : pDemo->bullets) {
        if (bullet.hitGround()) {
            double distance = computeDistance(pDemo->ground.getTarget(), bullet.getImpactPosition());
-
+            
+           assert(bullet.getImpactPosition().getPixelsY() <= pDemo->ground.getElevationMeters(bullet.getImpactPosition()));
            // We are only checking the size of the streak because a bullet actually lives for 20 frames after impact.
            // This extra life span gives us time to finish drawing the streak (if we missed the target.)
            // By checking if the size of the streak path is 19, we are basically making it so that we only run this 
@@ -160,7 +162,7 @@ void callBack(const Interface* pUI, void* p)
 
    // draw the howitzer
    gout.drawHowitzer(pDemo->ptHowitzer, pDemo->angle, pDemo->time);
-
+ 
    // draw the projectile
    for (Bullet bullet : pDemo->bullets) {
        double age = 0.0;
@@ -185,7 +187,20 @@ void callBack(const Interface* pUI, void* p)
            << bullet.getHangTime() << "s\n";
    }
    else {
-       gout << "angle: " << pDemo->angle * 180 / M_PI << "degrees";
+       Angle current = Angle();
+       current.setRadians(pDemo -> angle);
+       double angleOutput;
+       if (current.getDegrees() > 180.0) {
+           angleOutput = 360.0 - current.getDegrees();
+       }
+       else {
+           angleOutput = current.getDegrees();
+       }
+       
+       assert(angleOutput <= 180.0);
+       
+       gout << "angle: " << angleOutput << " degrees";
+       
    }
 }
 

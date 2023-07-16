@@ -14,6 +14,7 @@
 Bullet::Bullet(Position p, double radians, Ground * ground) : physics(radians, p, ground), startPos(p) {
     streakPath.push_front(p);
     impactPos = Position(-1.0, -1.0);
+    startAngle = radians;
 }
 
  bool Bullet::isAlive() const 
